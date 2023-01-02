@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<title>Fall OS - About me </title>  
+    <link style="border-radius: 50%" rel="icon" href="Images/favicon.ico">
+
+</head>
+<style>
+    @import 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400';
+
+    
+    *{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+	text-decoration: none;
+	list-style: none;
+}
+:root{
+	--bg-color: #222327;
+	--text-color: #fff;
+	--main-color: #9a06fd;
+}
+body{
+	min-height: 100vh;
+	background: var(--bg-color);
+	color: var(--text-color);
+}
+header{
+	position: fixed;
+	width: 100%;
+	top: 0;
+	right: 0;
+	z-index: 1000;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background: transparent;
+	padding: 28px 12%;
+	transition: all .50s ease;
+}
+.logo{
+	display: flex;
+	align-items: center;
+}
+.logo i{
+	color: var(--main-color);
+	font-size: 28px;
+	margin-right: 3px;
+}
+.logo span{
+	color: var(--text-color);
+	font-size: 1.7rem;
+	font-weight: 600;
+}
+.navbar{
+	display: flex;
+}
+.navbar a{
+	color: var(--text-color);
+	font-size: 1.1rem;
+	font-weight: 500;
+	padding: 5px 0;
+	margin: 0px 30px;
+	transition: all .50s ease;
+}
+.navbar a:hover{
+	color: var(--main-color);
+}
+.navbar a.active{
+	color: var(--main-color);
+}
+.main{
+	display: flex;
+	align-items: center;
+}
+.main a{
+	margin-right: 25px;
+	margin-left: 10px;
+	color: var(--text-color);
+	font-size: 1.1rem;
+	font-weight: 500;
+	transition: all .50s ease;
+}
+.user{
+	display: flex;
+	align-items: center;
+}
+.user i{
+	color: var(--main-color);
+	font-size: 28px;
+	margin-right: 7px;
+}
+
+#menu-icon{
+	font-size: 35px;
+	color: var(--text-color);
+	cursor: pointer;
+	z-index: 10001;
+	display: none;
+}
+
+
+@media (max-width: 1280px){
+	header{
+		padding: 14px 2%;
+		transition: .2s;
+	}
+	.navbar a{
+		padding: 5px 0;
+		margin: 0px 20px;
+	}
+}
+
+@media (max-width: 1090px){
+	#menu-icon{
+		display: block;
+	}
+	.navbar{
+		position: absolute;
+		top: 100%;
+		right: -100%;
+		width: 270px;
+		height: 29vh;
+		background: var(--main-color);
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		border-radius: 10px;
+		transition: all .50s ease;
+	}
+	.navbar a{
+		display: block;
+		margin: 12px 0;
+		padding: 0px 25px;
+		transition: all .50s ease;
+	}
+	.navbar a:hover{
+		color: var(--text-color);
+		transform: translateY(5px);
+	}
+	.navbar a.active{
+		color: var(--text-color);
+	}
+	.navbar.open{
+		right: 2%;
+	}
+}
+
+#intro{
+    margin-top: 100px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+button {
+  background-image: linear-gradient(to right, #DA22FF 0%, #9733EE  51%, #DA22FF  100%)
+}
+button {
+          margin: 50px;
+          padding: 15px 45px;
+          text-align: center;
+          text-transform: uppercase;
+          transition: 0.8s;
+          background-size: 200% auto;
+          color: white;            
+          border-radius: 10px;
+          display: block;
+    }
+ button:hover {
+ background-position: right center; 
+  color: #fff;
+  text-decoration: none;
+  }
+
+hr{
+	border-color: #9a06fd;
+	border-image: none;
+	border-style: solid none none;
+	border-width: 3px 0 0 ;
+}
+         
+</style>
+<body style="font-family:'Poppins', sans-serif">
+	<header>
+		<a href="../index.html" class="logo"><span>Fall OS</span></a>
+
+		<ul class="navbar">
+			<li><a href="#">Download</a></li>
+			<li><a href="gallery.html">Gallery</a></li>
+			<li><a href="#">Donate</a></li>
+			<li><a href="Aboutme.html" class="active">About Me</a></li>
+		</ul>
+	</header>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+    <div class="text" >
+        <section class="intro">
+            <h1 style="    width: 10px; margin-left: -600px;margin-top: -250px;">Knightfall</h1>
+            <hr style="width: 112px; color:#00FFF4 ; margin-left: -600px">
+			<br>
+			<p style="margin-left:-540px; font-size: 20px;"> I am Suganth Sarvesh a.k.a Knightfall, 
+			working as a Linux Kernel developer at <br> Amrita School of Computing,  Amrita Vishwa Vidyapeetham,
+			Coimbatore. I am <br>  currently pursuing  Btech in Cyber security  from Amrita Vishwa Vidyapeetham. <br> 
+			I am also the Founder of <a href=""><font style="color: #BD2AF8;font-size: 18px;">Fall OS </font></a>Open Source Operating System.
+		    It has always <br > been my goal to create a free open source operating system with minimal  and 
+			<br> Stunning performance without the constraints of the proprietary software that <br> values less of privacy. </p>
+			<br>
+			<p style="margin-left:-540px; font-size: 20px;">If you're looking for a custom Linux OS,
+			Specifically tailored according to your <br> needs  and work, then you can hire me. I can create a fully customized  Linux <br>
+			OS with any  Window Manager or Desktop Environment and everything else <br> you want in it. 
+			I've already done that for a few people, who are completely <br> satisfied with my work. 
+			If you're interested, feel free to contact me.</p>
+		</section>
+		<br>
+		<ul >
+			<li style="width: 0px;"><button ><a href="download.html" class="button" style="padding-top: -600px;">Contact Me</a></button></li>
+		</ul>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto validation with validator.js</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="validator.min.js"></script>
+    <script src="form_rules.js"></script>
+    <script src="auto_form_validation.js"></script>
+</head>
+
+<body>
+
+
+    <form id="form">
+        <div>
+            <label>Optional</label>
+            <input type="text">
+        </div>
+        <div>
+            <label>Text</label>
+            <input data-type="text" data-type-message="Required" type="text">
+        </div>
+        <div>
+            <label>Email</label>
+            <input data-type="email" data-type-message="Email Format" type="text">
+        </div>
+        <div>
+            <label>Password</label>
+            <input data-type="password" data-type-message="Password Format" type="password">
+        </div>
+        <div>
+            <label>Number</label>
+            <input data-type="number" data-type-message="Number Format" type="text">
+        </div>
+
+        <div>
+            <label>Select</label>
+            <select data-type="text" data-type-message="Select Option">
+                <option value=""></option>
+                <option value="1">one</option>
+            </select>
+        </div>
+        <div>
+            <label>Checkbox</label>
+            <input data-type="checkbox" data-type-message="Check Required" type="checkbox">
+        </div>
+
+        <div>
+            <label>Radio</label>
+            <div data-type="radio" data-type-message="Choose Option" style="flex-direction: row;align-items: center;">
+                <input type="radio" name="nb" value="one">one
+                <input type="radio" name="nb" value="two">two
+            </div>
+
+        </div>
+        <div>
+            <label>File</label>
+            <input data-type="text" data-type-message="File required" type="file">
+        </div>
+        <button id="jsSubmit">submit</button>
+    </form>
+
+
+
+    <script>
+        document.querySelector("#jsSubmit").addEventListener("click", function (e) {
+            e.preventDefault();
+            var result = isValidForm("#form");
+            alert(result);
+        });
+    </script>
+</body>
+
+</html>

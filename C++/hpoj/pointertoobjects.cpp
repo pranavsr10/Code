@@ -24,24 +24,48 @@ using namespace std;
 //   ptr -> get() ;
 // //   object.set();
 // }
-class Data
+
+
+
+
+// class Data
+// {
+// public:
+// int a;
+// void print()
+// {
+// cout << "a is "<< a;
+// }
+// };
+
+// int main()
+// {
+// Data d, *dp;
+// dp = &d; // pointer to object
+// // pointer to data member 'a'
+// int Data::*ptr=&Data::a;
+// d.*ptr=10;
+// d.print();
+// dp->*ptr=20;
+// dp->print();
+// }
+
+
+#include <iostream>
+using namespace std;
+class pointer
 {
-public:
-int a;
-void print()
-{
-cout << "a is "<< a;
-}
+    public:
+    int a;
+    int b;
 };
 
 int main()
 {
-Data d, *dp;
-dp = &d; // pointer to object
-// pointer to data member 'a'
-int Data::*ptr=&Data::a;
-d.*ptr=10;
-d.print();
-dp->*ptr=20;
-dp->print();
+  pointer object;
+  pointer *ptr ;
+  ptr = &object;
+  cout << "The value" << object.a << object.b << endl;
+  cout << ptr->a;
+  return 0;
 }

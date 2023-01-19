@@ -3,8 +3,8 @@ using namespace std;
 class pointer
 {
     public:
-    int a;
-    int b;
+    int a = 56;
+    int b = 72;
 };
 
 int main()

@@ -1,29 +1,30 @@
 #include <iostream>
 using namespace std;
-// class number
-// {
-//   int a;
-//   public:
-//   void set()
-//   {
-//     cout << " Enter the value of a :" << endl;
-//     cin >> a ;
-//   };
-//   void get()
-//   {
-//     cout << " Get the value of a " << a << endl;
-//   }
-// };
+class number
+{
+  private:
+  int a;
+  public:
+  void set()
+  {
+    cout << " Enter the value of a :" << endl;
+    cin >> a ;
+  };
+  void get()
+  {
+    cout << " Get the value of a " << a << endl;
+  }
+};
 
-// int main()
-// {
-//   number object ;
-//   number *ptr;
-//   ptr = &object;
-//   ptr -> set();
-//   ptr -> get() ;
-// //   object.set();
-// }
+int main()
+{
+  number object ;
+  number *ptr;
+  ptr = &object;
+  ptr -> set();
+  ptr -> get() ;
+//   object.set();
+}
 
 
 
@@ -51,21 +52,21 @@ using namespace std;
 // }
 
 
-#include <iostream>
-using namespace std;
-class pointer
-{
-    public:
-    int a;
-    int b;
-};
+// #include <iostream>
+// using namespace std;
+// class pointer
+// {
+//     public:
+//     int a;
+//     int b;
+// };
 
-int main()
-{
-  pointer object;
-  pointer *ptr ;
-  ptr = &object;
-  cout << "The value" << object.a << object.b << endl;
-  cout << ptr->a;
-  return 0;
-}
+// int main()
+// {
+//   pointer object;
+//   pointer *ptr ;
+//   ptr = &object;
+//   cout << "The value" << object.a << object.b << endl;
+//   cout << ptr->a;
+//   return 0;
+// }

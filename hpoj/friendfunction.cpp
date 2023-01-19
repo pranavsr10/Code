@@ -11,10 +11,10 @@ class DC
         chapternumber = 0;
     }
     
-    void display()
-    {
-        cout << " chapternumber: " << chapternumber << endl;
-    }
+    // void display()
+    // {
+    //     cout << " chapternumber: " << chapternumber << endl;
+    // }
     
     friend int display2(DC &d);
 
@@ -30,7 +30,7 @@ int display2(DC &d)
 int main()
 {
     DC superman;
-    superman.display();
+    // superman.display();
     cout << "Chapter number : " <<  display2(superman);
     return 0;
 }

@@ -21,4 +21,4 @@
 #     print("Nothing went wrong so it got executed sucessfully")
 # finally:
 #     print("The program has been executed.")
-print('Hello') if 50 > 7 else print('Hi')
+#print('Hello') if 50 > 7 else print('Hi')

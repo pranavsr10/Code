@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <script>
+            function formvalidation() {
+                 let x = document.getElementById("name").value;
+                 let y = document.getElementById("paswd").value;
+                 if (x ==""||y ==""){
+                    alert("Please enter a valid name and password");
+                    return false;
+                 }
+                 else if (x.length() < 10 || y.length() < 10){
+                    alert("Password must be at least 10 characters");
+                    return false;
+                 }
+                 else {
+                 return true;
+                 }
+                }
+        </script>
+    </head>
+        <body>
+            <form onsubmit="return formvalidation()" action="index.html">
+                <label for="name">Name :</label>
+                <input type="text" id = "name" placeholder="Name"/>
+                <br /><br>
+                <label for="paswd">Password :</label>
+                <input type="text" id = "paswd" placeholder="paswd"/>
+                <br /><br>
+                <button type="submit">Submit</button>
+            </form>
+        </body>
+</html>

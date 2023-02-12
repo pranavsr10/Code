@@ -24,4 +24,7 @@ func main()  {
  // #############################################################################
  fmt.Printf("Float Functions \n")
  fmt.Printf("%f \n %e \n %3.2f \n %g" , d , d , d , d)
+ fmt.Printf("\nOombu da juni")
+ fmt.Printf("\nHello")
 }
+

@@ -2,7 +2,7 @@
 def queueUpdation(queue, timer, arrival, n, maxProccessIndex):
     zeroIndex = -1
     for i in range(n):
-        if(queue[i] == 0):
+        if(queue[i] == 0a:
             zeroIndex = i
             break
  

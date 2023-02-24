@@ -1,11 +1,15 @@
 num = int(input("Enter a number: "))
 sum = 0
-a = num
-while a > 0:
-    digit = a%10
-    sum += digit ** 3
-    a //=10
+order = len(str(num))
+
+temp = num
+while temp > 0:
+   digit = temp % 10
+   sum += digit ** order
+   temp //= 10
+
 if num == sum:
-    print(num,"It is an Armstrong number")
+   print(num, "is an Armstrong number")
 else:
-    print(num,"It is not a Armstrong number")
+   print(num, "is not an Armstrong number")
+

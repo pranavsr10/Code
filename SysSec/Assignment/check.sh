@@ -6,7 +6,7 @@ gcc -o myprog main.o /home/knightfall/Code/SysSec/Assignment/Q1/libfirst.a /home
 
 ./myprog
 
-sleep 3
+sleep 2
 
 echo "Executing the Python program "arm.py"  ..."
 

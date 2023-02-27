@@ -10,7 +10,7 @@ Linking:
 	@gcc -c file.c -o main.o
 	@gcc -o myprog main.o Q1/libfirst.a Q2/libsec.so
 	@echo "Program Executed"
-	@./myprog
+	# @./myprog
   
 Permission:
 	@chmod +x check.sh

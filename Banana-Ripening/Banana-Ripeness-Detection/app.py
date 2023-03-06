@@ -8,7 +8,7 @@ st.write('''
 ''')
 st.write("A Image Classification Web App That Detects the Ripeness Stage of Banana")
 
-file = st.file_uploader("", type=['jpg','png'])
+file = st.file_uploader("", type=['jpg','png' , 'jpeg'])
 
 
 def predict_stage(image_data,model):
@@ -21,17 +21,17 @@ def predict_stage(image_data,model):
     preds = ""
     prediction = model.predict(data)
     if np.argmax(prediction)==0:
-        st.write(f"Unripe_Stage")
+        st.write(f"This Banana is in a unripe Stage")
     elif np.argmax(prediction)==1:
-        st.write(f"Overripe_Stage")
+        st.write(f"This Banana is in a Overripe Stage")
     else :
-        st.write(f"Ripe_Stage")
+        st.write(f"This Banana is in a Ripe stage")
 
     return prediction
 
 
 if file is None:
-    st.text("Please upload an image file")
+    st.text("Please upload an image file that is in JPG or PNG format")
 else:
     image = Image.open(file)
     st.image(image, use_column_width=True)

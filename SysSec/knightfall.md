@@ -40,7 +40,7 @@ LINKING BOTH LIBRARIES:
 ```
 gcc -c mainfile.c -o mainfile.o
 
-gcc -o binaryfile library1.a library1.so
+gcc -o binaryfile mainfile.c library1.a library1.so
 
 ./binaryfile
 

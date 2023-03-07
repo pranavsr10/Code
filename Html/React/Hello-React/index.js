@@ -2,7 +2,7 @@ ReactDOM.render(<ul> <li> HI</li> <li> Hello </li> <li> I am </li> </ul>, docume
 
 
 function Content(){
-    return(
+    return( 
         <div>
         <h1> This is the main content</h1>
         </div>
@@ -10,3 +10,4 @@ function Content(){
     }
 
     ReactDOM.render(<Content />, document.getElementById('main'));
+ReactDOM.render(<div><h1 className="header"> This is JSK</h1></div>, document.getElementById('main'));

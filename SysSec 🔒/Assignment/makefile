@@ -17,5 +17,3 @@ Permission:
 
 Execution:
 	@sh check.sh
-
-

@@ -28,17 +28,14 @@ const paragraphs = (
 
 ReactDOM.render(paragraphs, document.getElementById('paragraph'));
 
-function list(){
-    return (
-    <div>
+function List() {
+    return(
         <ul>
-            <li> Hello </li>
-            <li> Hi</li>
-            <li> No</li>
+            <li>  It is used to develop I/O intensive web applications like video streaming sites, single-page applications, and other web applications.</li>
+            <br></br>
+            <li> Another line </li>
         </ul>
-    </div>
     )
 }
 
-console.log(list());
-ReactDOM.render(<list />, document.getElementById('no'));
+ReactDOM.render(<List />, document.getElementById('router'));

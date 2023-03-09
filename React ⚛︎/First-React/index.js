@@ -27,3 +27,18 @@ const paragraphs = (
 )
 
 ReactDOM.render(paragraphs, document.getElementById('paragraph'));
+
+function list(){
+    return (
+    <div>
+        <ul>
+            <li> Hello </li>
+            <li> Hi</li>
+            <li> No</li>
+        </ul>
+    </div>
+    )
+}
+
+console.log(list());
+ReactDOM.render(<list />, document.getElementById('no'));

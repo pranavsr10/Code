@@ -11,7 +11,7 @@ ssh-keygen ~ Creates a rsa key
 
 ssh knightfall@127.0.0.1 ~ Password Based Authenctication
 
-ssh -i centos7template01.txt root@10.30.15.176 ~ With Private key
+ssh-copyid suganth@127.0.0.1 ~ With Private key
 
 ```
 

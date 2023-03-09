@@ -1,0 +1,16 @@
+*{
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    list-style: none;
+}
+
+:root{
+    --bg-color: #131516;
+    --text-color: #fff;
+    --main-color: #29fd53;
+}
+
+.nav-items {
+    list-style: none outside;
+}
+

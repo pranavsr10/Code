@@ -1,2 +1,3 @@
-echo:
-	@echo "hello world"
+jasir:
+	echo "Hello"
+	echo "rendu oombu"

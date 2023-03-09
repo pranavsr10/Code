@@ -2,16 +2,11 @@ function Navbar() {
     return (
         <div>
             <nav>
-                <img src="./src/image.png" alt="image" width="200px" />
-                <ul>
-                    <li>Home |</li>
-                    <li>About |</li>
-                    <li>Downloads |</li>
-                    <li>Docs  |</li>
-                    <li>Get Involved  |</li>
-                    <li>Security  |</li>
-                    <li>Certification  |</li>
-                    <li>News  |</li>
+                {/* <img src="./src/image.png" alt="image" width="200px" /> */}
+                <a className="logo"><i class='bx bxl-nodejs'></i><span>Node JS</span></a>
+                <ul className="navbar">
+                    <li>Home</li>
+                    <li></li>
                 </ul>
                 </nav>
         </div>
@@ -37,11 +32,11 @@ function Everything() {
 function Olti() {
     return (
         <div>
-            <ol>
+            <ul className="nav-items">
                 <li> It is used to develop I/O intensive web applications like video streaming sites, single-page applications, and other web applications.</li>
                 <br></br>
                 <li> Node.js is open source, completely free, and used by thousands of developers around the world.</li>
-            </ol>
+            </ul>
         </div>
     )
 }
@@ -59,7 +54,10 @@ function Footer(){
 function Favicons() {
     return(
         <div>
-            <link rel="icon" href="./src/favicon.png" />
+            <meta charset="utf-8" />
+            <title>Node JS</title>
+            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+            {/* <link rel="icon" href="./src/favicon.png" /> */}
         </div>
     )
 }

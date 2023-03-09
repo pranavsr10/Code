@@ -1,3 +1,4 @@
+USER creation :
 
 ```
 sudo useradd -m suganth ~ Adds a new user and creates home directory
@@ -5,6 +6,7 @@ sudo useradd -m suganth ~ Adds a new user and creates home directory
 sudo usermod -aG sudo suganth ~ Adds the new user 
 
 ```
+SSH :
 
 ```
 ssh-keygen ~ Creates a rsa key
@@ -43,6 +45,17 @@ gcc -c mainfile.c -o mainfile.o
 gcc -o binaryfile mainfile.c library1.a library1.so
 
 ./binaryfile
+
+```
+
+TELNET:
+
+```
+telnet ipaddress
+
+     or
+
+telnet localhost
 
 ```
 

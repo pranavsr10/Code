@@ -5,8 +5,11 @@ function Navbar() {
                 {/* <img src="./src/image.png" alt="image" width="200px" /> */}
                 <a className="logo"><i class='bx bxl-nodejs'></i><span>Node JS</span></a>
                 <ul className="navbar">
-                    <li>Home</li>
-                    <li></li>
+                    <li><a classsName = "active">Home</a></li>
+                    <li>About us </li>
+                    <li>Download</li>
+                    <li>Documentation</li>
+                    <li>Get Involved</li>
                 </ul>
                 </nav>
         </div>

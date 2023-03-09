@@ -1,9 +1,9 @@
 USER creation :
 
 ```
-sudo useradd -m suganth ~ Adds a new user and creates home directory
+sudo useradd -m knightfall ~ Adds a new user and creates home directory
 
-sudo usermod -aG sudo suganth ~ Adds the new user 
+sudo usermod -aG sudo knightfall ~ Adds the new user 
 
 ```
 SSH :
@@ -13,7 +13,7 @@ ssh-keygen ~ Creates a rsa key
 
 ssh knightfall@127.0.0.1 ~ Password Based Authenctication
 
-ssh-copyid suganth@127.0.0.1 ~ With Private key
+ssh-copyid knightfall2@127.0.0.1 ~ With Private key
 
 ```
 

@@ -3,9 +3,10 @@ function Navbar() {
         <div>
             <nav>
                 {/* <img src="./src/image.png" alt="image" width="200px" /> */}
-                <a className="logo"><i class='bx bxl-nodejs'></i><span>Node JS</span></a>
-                <ul className="navbar">
-                    <li><a classsName = "active">Home</a></li>
+                <a className="logo"><i class='bx bxl-nodejs'></i></a>
+                <a className="logotext"><span> Node JS</span></a>
+                <ul className="navbar1">
+                    <li><a className = "active">Home</a></li>
                     <li>About us </li>
                     <li>Download</li>
                     <li>Documentation</li>
@@ -24,10 +25,12 @@ function Everything() {
             <header>
                 <Navbar /> 
             </header>
+            <div className = "maintext">
             <h1> Node JS</h1>
             <p> Node.js is a very powerful JavaScript-based platform built on Google Chrome's JavaScript V8 Engine:</p>
             <Olti />
             <Footer />
+            </div>
         </div>
     )
 }

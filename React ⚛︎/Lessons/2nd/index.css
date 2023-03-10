@@ -2,6 +2,7 @@
     font-family: 'Poppins', sans-serif;
     text-decoration: none;
     list-style: none;
+    font-size: large;
 }
 
 :root{
@@ -10,7 +11,52 @@
     --main-color: #29fd53;
 }
 
+body {
+    min-height: 100vh;
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+.navbar1 {
+    position: fixed;
+    width: 30%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    background: transparent;
+    padding: 30px 12%;
+    transition: all 0.50s ease;
+}
+
+.logo {
+    position: fixed;
+    width: 10%;
+    right: 10;
+    z-index: 1000;
+    padding: 30px 12%;
+    color: #29fd53;
+}
+
+
+.logotext {
+    position: fixed;
+    width: 10%;
+    right: 10;
+    z-index: 1000;
+    padding: 30px 13%;
+    /* color: #29fd53; */
+}
+
 .nav-items {
     list-style: none outside;
 }
 
+.maintext {
+    width: 100%;
+    /* right: 10; */
+    z-index: 1000;
+    /* margin: 100px; */
+    margin-top: 100px;
+}

@@ -12,4 +12,3 @@ generating:
 clean:
 	@echo "Cleaning your files "
 	@rm *.txt
-

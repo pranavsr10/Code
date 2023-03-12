@@ -3,7 +3,7 @@ USER creation :
 ```
 sudo useradd -m knightfall ~ Adds a new user and creates home directory
 
-sudo usermod -aG sudo knightfall ~ Adds the new user 
+sudo usermod -aG sudo knightfall ~ Adds the new user to sudo group or gives the sudo permission to the user
 
 ```
 SSH :

@@ -24,6 +24,10 @@ searching.map(searching => {
     return `While searching , I found ${searching}`
 })
 
-function consoleerror(err: string) {
+function consoleerror(err: string) : void {
     console.log(err);
+}
+
+function handlingError(err: string) : never {
+    throw new Error(err);
 }

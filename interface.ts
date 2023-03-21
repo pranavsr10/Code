@@ -2,7 +2,7 @@ interface User {
     usernames: string,
     phoneNumber: number,
     withGoogle?: boolean
-    WithFunction(): string
+    // WithFunction(): string
 }
 
 interface User{
@@ -19,3 +19,10 @@ const Knightfall: User = {usernames: 'Knightfall', phoneNumber: 212 , WithFuncti
 console.log(Knightfall); 
 
 const Knightfall1: Admin = {usernames: 'Knightfall', phoneNumber: 212 , WithFunction: () => {return 'Knightfall'}, role: "admin"}
+
+class someone implements User {
+    constructor(
+        public usernames: string,
+        public phoneNumber: number
+        ) {}
+}

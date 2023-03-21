@@ -11,6 +11,7 @@
 
 class User{
     private count = 1
+    protected examples = 1
     readonly site: string = "http://github.com"
     constructor(
       public username: string,
@@ -32,6 +33,7 @@ class User{
 
 class SubUser extends User{
   isAnother = true;
+  protected examples = 2
   
 }
 
@@ -41,3 +43,24 @@ const MyUser = new User('knightfall', 'passwd');
 // MyUser.password
 
 console.log(MyUser); 
+
+abstract class someone{
+  constructor(
+    public username: string, 
+    public password: string
+    ) {}
+  abstract hello(): void
+}
+
+// const  nothing = new someone("knightfall", "passwd");
+
+class someonegain extends someone{
+  constructor(public username: string, public password: string){
+    super(username, password);
+  }
+  hello(): void {
+    console.log("hello world")
+  }
+}
+
+const  nothing = new someonegain("knightfall", "passwd");

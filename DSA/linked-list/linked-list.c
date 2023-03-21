@@ -62,6 +62,30 @@ int InsertingAtIndex(int val , int index){
   return 0;
 }
 
+
+// int InsertingAtIndex(int index, int val){
+//   struct node *NewNode = (struct node *)malloc(sizeof(struct node));
+//   NewNode->input = val;
+//   if (head == NULL){
+//     NewNode ->next = NULL;
+//     head = NewNode;
+//     printf("Value %d inserted at %d index. \n",val , index);
+//     return 0;
+//   }
+//   struct node *temp = head;
+//   for (int i = 0; i < index-1 ; i++){
+//     if (temp ->next == NULL){
+//       printf("Please provide a valid index.\n");
+//       return 0;
+//     }
+//     temp = temp->next;
+//   }
+//   NewNode->next = temp->next;
+//   temp->next = NewNode;
+//   printf("Inserted the %d value at the given index %d \n", val , index);
+//   return 0;
+// }
+
 int DeleteFromBegining(){
   if (head == NULL){
     printf("List is empty. \n");
@@ -128,6 +152,7 @@ int main(){
           scanf("%d", &val);
           InsertingFromBegining(val);
           printf("\n");
+          Traversal();
           printf("#############################################################");
           break;
       case 2:
@@ -135,6 +160,7 @@ int main(){
           scanf("%d", &val);
           InsertingFromEnd(val);
           printf("\n");
+          Traversal();
           printf("#############################################################");
           break;
       case 3:
@@ -144,14 +170,20 @@ int main(){
           scanf("%d", &index);
           printf("\n");
           InsertingAtIndex(val, index);
+          printf("\n");
+          Traversal();
+          printf("#############################################################");
+          break;
       case 4:
           DeleteFromBegining();
           printf("\n");
+          Traversal();
           printf("#############################################################");
           break;
       case 5:
           DeleteFromEnd();
           printf("\n");
+          Traversal();
           printf("#############################################################"); 
           break;
       case 6:

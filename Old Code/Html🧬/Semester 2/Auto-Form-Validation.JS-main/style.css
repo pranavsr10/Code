@@ -1,0 +1,57 @@
+body {
+    font-family: sans-serif;
+}
+
+[data-invalid-input] {
+    border: 1px solid #f93154;
+}
+
+[data-invalid-message] {
+    color: #f93154;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+    font-style: italic;
+    font-size: 0.8rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: auto;
+    border-radius: 8px;
+    box-shadow: 1px 1px 5px grey;
+    padding: 10px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input,
+select {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid rgb(206, 194, 194);
+    margin: 5px 0;
+    background-color: white;
+}
+
+div {
+    border-radius: 8px;
+    display: flex;
+    padding: 5px;
+    flex-direction: column;
+}
+
+button {
+    padding: 0.5rem 1.5rem;
+    background-color: #f93154;
+    color: white;
+    cursor: pointer;
+    border-radius: 8px;
+    border: 2px solid white;
+    box-shadow: 1px 1px 5px #f93154;
+    font-size: 1.2rem;
+}

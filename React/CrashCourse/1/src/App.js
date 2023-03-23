@@ -10,6 +10,7 @@ function App() {
     {age >= 0 ? <h1>Valid Age</h1> : <h1>Invalid Age</h1>}
     <h1 style={{ color: isGreen ? "green" : "red" }}>Hello</h1>
     <h1 style={{color: Condo ? "purple" : "black" }}>Hi</h1>
+    {Condo && <button>Hello </button>}
     </div>
   // return (
   //   <div className={styles.App}>

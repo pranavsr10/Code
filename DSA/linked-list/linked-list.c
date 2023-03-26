@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <sys/types.h>
 
 struct node{
   int input; 
@@ -117,6 +118,8 @@ int DeleteFromEnd(){
   printf("Deleted from End. \n");
   return 0;
 }
+
+uint
 
 int Traversal(){
   if (head == NULL){

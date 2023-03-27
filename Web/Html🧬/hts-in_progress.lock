@@ -1,7 +1,0 @@
-Mirror in progress since Mon, 27 Mar 2023 13:03:11 .. please wait!
-httrack -%e1 https://archcraft.io/index.html 
-To pause the engine: create an empty file named 'hts-stop.lock'
-PID=29091
-UID=1000
-GID=1000
-START=1679902391

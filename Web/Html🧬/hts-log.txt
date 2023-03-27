@@ -12,3 +12,58 @@ note:	the hts-log.txt file, and hts-cache folder, may contain sensitive informat
 13:04:03	Warning: 	Moved Permanently for https://www.archlinux.org/
 13:04:03	Warning: 	Redirected link is identical because of 'URL Hack' option: https://www.archlinux.org/ and https://archlinux.org/
 13:04:03	Warning: 	File has moved from https://www.archlinux.org/ to https://archlinux.org/
+13:11:37	Warning: 	Unexpected socket error during pre-loop
+13:12:02	Error: 	Exit requested by shell or user
+13:12:02	Warning: 	File not added due to mirror cancel: schema.org/BlogPosting
+13:12:02	Warning: 	File not added due to mirror cancel: https://www.reddit.com/robots.txt
+13:12:02	Warning: 	File not added due to mirror cancel: https://discord.com/robots.txt
+13:12:02	Warning: 	File not added due to mirror cancel: https://t.me/robots.txt
+13:12:02	Warning: 	File not added due to mirror cancel: https://matrix.to/robots.txt
+13:12:02	Warning: 	File not added due to mirror cancel: https://github.com/robots.txt
+13:12:02	Warning: 	File not added due to mirror cancel: https://sourceforge.net/robots.txt
+13:12:02	Error: 	"Forbidden" (403) at link https://sourceforge.net/projects/archcraft/files/ (from https://archcraft.io/index.html)
+13:12:02	Warning: 	File not added due to mirror cancel: https://twitter.com/robots.txt
+13:12:02	Error: 	"Not Found" (404) at link https://archcraft.io/images/2.svg (from https://archcraft.io/images/fav.svg)
+13:12:02	Warning: 	File not added due to mirror cancel: https://inkscape.org/robots.txt
+13:12:02	Error: 	"Not Found" (404) at link https://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd (from https://archcraft.io/images/fav.svg)
+13:12:02	Warning: 	File not added due to mirror cancel: https://www.w3.org/robots.txt
+13:12:02	Warning: 	File not added due to mirror cancel: https://fonts.googleapis.com/robots.txt
+13:12:02	Error: 	"Not Found" (404) at link https://archcraft.io/images/1.svg (from https://archcraft.io/images/logo.svg)
+13:12:02	Error: 	"Forbidden" (403) at link https://sourceforge.net/projects/archcraft/files/latest/download (from https://archcraft.io/download.html)
+13:12:02	Warning: 	File not added due to mirror cancel: https://drive.google.com/robots.txt
+13:12:02	Warning: 	File not added due to mirror cancel: https://mega.nz/robots.txt
+13:12:02	Warning: 	Retry after error -5 (error:00000005:lib(0)::reason(5)) at link https://mega.nz/folder/OyZgUT7Z (from https://archcraft.io/download.html)
+13:12:02	Warning: 	File not added due to mirror cancel: https://kiszczyc.pl/robots.txt
+13:12:02	Warning: 	File not added due to mirror cancel: https://archcraftmirror.ml/robots.txt
+13:12:02	Warning: 	File not added due to mirror cancel: https://objects.githubusercontent.com/robots.txt
+13:12:02	Warning: 	Retry after error -4 (Incorrect length (20331906 Bytes, 2088316928 expected)) at link https://objects.githubusercontent.com/github-production-release-asset-2e65be/547100840/e596d2e9-4f1c-47ab-a8e2-4877550c5f3c?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20230327%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20230327T073452Z&X-Amz-Expires=300&X-Amz-Signature=1d4712e43557249f058a6b0b11787006082b84719cd43f58bb1173169a34476d&X-Amz-SignedHeaders=host&actor_id=0&key_id=0&repo_id=547100840&response-content-disposition=attachment%3B%20filename%3Darchcraft-xfce-2023.01.20-x86_64.iso&response-content-type=application%2Foctet-stream (from https://archcraft.io/flavors.html)
+13:12:02	Warning: 	Retry after error -4 (Incorrect length (12795266 Bytes, 2082222080 expected)) at link https://objects.githubusercontent.com/github-production-release-asset-2e65be/549383486/d79193e6-2b29-4859-b464-6b3d853aa726?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20230327%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20230327T073505Z&X-Amz-Expires=300&X-Amz-Signature=820d9aaec234f65e4c251098b036bec06caa3780b4821bcb79cf1e024ec02be9&X-Amz-SignedHeaders=host&actor_id=0&key_id=0&repo_id=549383486&response-content-disposition=attachment%3B%20filename%3Darchcraft-lxde-2023.01.22-x86_64.iso&response-content-type=application%2Foctet-stream (from https://archcraft.io/flavors.html)
+13:12:02	Warning: 	File not added due to mirror cancel: https://ko-fi.com/robots.txt
+13:12:02	Warning: 	File not added due to mirror cancel: https://wiki.archlinux.org/robots.txt
+13:12:02	Warning: 	File not added due to mirror cancel: https://www.youtube.com/robots.txt
+13:12:03	Warning: 	Retry after error -4 (Incorrect length (245060 Bytes, 637189 expected)) at link https://archcraft.io/images/wc/wayfire/wayfire.png (from https://archcraft.io/premium.html)
+13:12:03	Warning: 	Retry after error -5 (error:00000005:lib(0)::reason(5)) at link https://ko-fi.com/s/69957c0587 (from https://archcraft.io/premium.html)
+13:12:03	Warning: 	File not added due to mirror cancel: https://wiki.hyprland.org/robots.txt
+13:12:03	Warning: 	File not added due to mirror cancel: https://bh4d9od16a-dsn.algolia.net/robots.txt
+13:12:03	Warning: 	Moved Permanently for https://bh4d9od16a-dsn.algolia.net/
+13:12:03	Warning: 	File has moved from https://bh4d9od16a-dsn.algolia.net/ to https://algolia.net/1/404
+13:12:03	Error: 	"Forbidden" (403) at link https://sourceforge.net/projects/archcraft (from https://wiki.archcraft.io/)
+13:12:03	Warning: 	File not added due to mirror cancel: schema.org/robots.txt
+13:12:03	Warning: 	Retry after error -4 (Receive Error) at link schema.org/Blog (from https://wiki.archcraft.io/news)
+13:12:03	Warning: 	File not added due to mirror cancel: schema.org/BlogPosting
+13:12:03	Error: 	"mirror stopped by user" (-1) at link schema.org/BlogPosting (from https://wiki.archcraft.io/news)
+13:12:03	Warning: 	File not added due to mirror cancel: https://mega.nz/folder/OyZgUT7Z
+13:12:03	Error: 	"mirror stopped by user" (-1) at link https://mega.nz/folder/OyZgUT7Z (from https://archcraft.io/download.html)
+13:12:03	Warning: 	File not added due to mirror cancel: https://objects.githubusercontent.com/github-production-release-asset-2e65be/547100840/e596d2e9-4f1c-47ab-a8e2-4877550c5f3c?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20230327%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20230327T073452Z&X-Amz-Expires=300&X-Amz-Signature=1d4712e43557249f058a6b0b11787006082b84719cd43f58bb1173169a34476d&X-Amz-SignedHeaders=host&actor_id=0&key_id=0&repo_id=547100840&response-content-disposition=attachment%3B%20filename%3Darchcraft-xfce-2023.01.20-x86_64.iso&response-content-type=application%2Foctet-stream
+13:12:03	Error: 	"mirror stopped by user" (-1) at link https://objects.githubusercontent.com/github-production-release-asset-2e65be/547100840/e596d2e9-4f1c-47ab-a8e2-4877550c5f3c?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20230327%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20230327T073452Z&X-Amz-Expires=300&X-Amz-Signature=1d4712e43557249f058a6b0b11787006082b84719cd43f58bb1173169a34476d&X-Amz-SignedHeaders=host&actor_id=0&key_id=0&repo_id=547100840&response-content-disposition=attachment%3B%20filename%3Darchcraft-xfce-2023.01.20-x86_64.iso&response-content-type=application%2Foctet-stream (from https://archcraft.io/flavors.html)
+13:12:03	Warning: 	File not added due to mirror cancel: https://objects.githubusercontent.com/github-production-release-asset-2e65be/549383486/d79193e6-2b29-4859-b464-6b3d853aa726?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20230327%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20230327T073505Z&X-Amz-Expires=300&X-Amz-Signature=820d9aaec234f65e4c251098b036bec06caa3780b4821bcb79cf1e024ec02be9&X-Amz-SignedHeaders=host&actor_id=0&key_id=0&repo_id=549383486&response-content-disposition=attachment%3B%20filename%3Darchcraft-lxde-2023.01.22-x86_64.iso&response-content-type=application%2Foctet-stream
+13:12:03	Error: 	"mirror stopped by user" (-1) at link https://objects.githubusercontent.com/github-production-release-asset-2e65be/549383486/d79193e6-2b29-4859-b464-6b3d853aa726?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20230327%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20230327T073505Z&X-Amz-Expires=300&X-Amz-Signature=820d9aaec234f65e4c251098b036bec06caa3780b4821bcb79cf1e024ec02be9&X-Amz-SignedHeaders=host&actor_id=0&key_id=0&repo_id=549383486&response-content-disposition=attachment%3B%20filename%3Darchcraft-lxde-2023.01.22-x86_64.iso&response-content-type=application%2Foctet-stream (from https://archcraft.io/flavors.html)
+13:12:03	Warning: 	File not added due to mirror cancel: https://archcraft.io/images/wc/wayfire/wayfire.png
+13:12:03	Error: 	"mirror stopped by user" (-1) at link https://archcraft.io/images/wc/wayfire/wayfire.png (from https://archcraft.io/premium.html)
+13:12:03	Warning: 	File not added due to mirror cancel: https://ko-fi.com/s/69957c0587
+13:12:03	Error: 	"mirror stopped by user" (-1) at link https://ko-fi.com/s/69957c0587 (from https://archcraft.io/premium.html)
+13:12:03	Warning: 	File not added due to mirror cancel: schema.org/Blog
+13:12:03	Error: 	"mirror stopped by user" (-1) at link schema.org/Blog (from https://wiki.archcraft.io/news)
+
+HTTrack Website Copier/3.49-2 mirror complete in 8 minutes 52 seconds : 366 links scanned, 321 files written (151851681 bytes overall) [172650567 bytes received at 324531 bytes/sec], 16159126 bytes transferred using HTTP compression in 122 files, ratio 19%, 2.7 requests per connection
+(14 errors, 44 warnings, 0 messages)

@@ -1,0 +1,1122 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+
+<!-- Mirrored from wiki.archlinux.org/title/wayland by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 27 Mar 2023 07:42:02 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8"/>
+<title>Wayland - ArchWiki</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"07ba391659c9fbb67198cd53","wgCSPNonce":false,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Wayland","wgTitle":"Wayland","wgCurRevisionId":773197,"wgRevisionId":773197,"wgArticleId":10625,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Pages with missing package links","Pages with dead links","Graphical user interfaces"],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Wayland","wgRelevantArticleId":10625,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],
+"wgVector2022PreviewPages":[]};RLSTATE={"skins.vector.user.styles":"ready","site.styles":"ready","user.styles":"ready","skins.vector.user":"ready","user":"ready","user.options":"loading","mediawiki.ui.button":"ready","skins.vector.styles":"ready","skins.vector.icons":"ready","mediawiki.ui.icon":"ready","jquery.tablesorter.styles":"ready","zzz.ext.archLinux.styles":"ready","ext.DarkMode.styles":"ready"};RLPAGEMODULES=["site","mediawiki.page.ready","jquery.tablesorter","mediawiki.toc","https://wiki.archlinux.org/title/skins.vector.js","skins.vector.es6","ext.DarkMode"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});});});</script>
+<link rel="stylesheet" href="https://wiki.archlinux.org/load.php?lang=en&amp;modules=ext.DarkMode.styles%7Cjquery.tablesorter.styles%7Cmediawiki.ui.button%2Cicon%7Cskins.vector.icons%2Cstyles%7Czzz.ext.archLinux.styles&amp;only=styles&amp;skin=vector-2022"/>
+<script async="" src="https://wiki.archlinux.org/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector-2022"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="https://wiki.archlinux.org/load.php?lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector-2022"/>
+<meta name="generator" content="MediaWiki 1.39.2"/>
+<meta name="referrer" content="no-referrer-when-downgrade"/>
+<meta name="format-detection" content="telephone=no"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, minimum-scale=0.25, maximum-scale=5.0"/>
+<link rel="icon" href="https://wiki.archlinux.org/favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://wiki.archlinux.org/opensearch_desc.php" title="ArchWiki (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://wiki.archlinux.org/api.php?action=rsd"/>
+<link rel="license" href="https://www.gnu.org/copyleft/fdl.html"/>
+<link rel="alternate" type="application/atom+xml" title="ArchWiki Atom feed" href="https://wiki.archlinux.org/index.php?title=Special:RecentChanges&amp;feed=atom"/>
+</head>
+<body class="skin-vector skin-vector-search-vue mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Wayland rootpage-Wayland skin-vector-2022 action-view skin--responsive vector-feature-language-in-header-enabled vector-feature-language-in-main-page-header-disabled vector-feature-language-alert-in-sidebar-disabled vector-feature-sticky-header-disabled vector-feature-sticky-header-edit-disabled vector-feature-table-of-contents-disabled vector-feature-visual-enhancement-next-disabled"><div id="archnavbar" class="noprint mw-no-invert">
+    <div id="archnavbarlogo">
+        <p><a id="logo" href="https://archlinux.org/"></a></p>
+    </div>
+    <div id="archnavbarmenu">
+        <ul id="archnavbarlist">
+                        <li id="anb-home"><a href="https://archlinux.org/">Home</a></li>            <li id="anb-packages"><a href="https://archlinux.org/packages/">Packages</a></li>            <li id="anb-forums"><a href="https://bbs.archlinux.org/">Forums</a></li>            <li id="anb-wiki" class="anb-selected"><a href="https://wiki.archlinux.org/">Wiki</a></li>            <li id="anb-bugs"><a href="https://bugs.archlinux.org/">Bugs</a></li>            <li id="anb-security"><a href="https://security.archlinux.org/">Security</a></li>            <li id="anb-aur"><a href="https://aur.archlinux.org/">AUR</a></li>            <li id="anb-download"><a href="https://archlinux.org/download/">Download</a></li>        </ul>
+    </div>
+</div>
+<div class="mw-page-container">
+	<span id="top-page"></span>
+	<a class="mw-jump-link" href="#content">Jump to content</a>
+	<div class="mw-page-container-inner">
+		<input
+			type="checkbox"
+			id="mw-sidebar-checkbox"
+			class="mw-checkbox-hack-checkbox"
+			>
+		<header class="mw-header">
+			<div class="mw-header-aside">
+			<label
+				id="mw-sidebar-button"
+				class="mw-checkbox-hack-button mw-ui-icon mw-ui-button mw-ui-quiet mw-ui-icon-element"
+				for="mw-sidebar-checkbox"
+				role="button"
+				aria-controls="mw-panel"
+				data-event-name="ui.sidebar"
+				tabindex="0"
+				title="Main menu">
+				<span>Toggle sidebar</span>
+			</label>
+			
+<a href="https://wiki.archlinux.org/title/Main_page" class="mw-logo">
+	<span class="mw-logo-container">
+		<strong class="mw-logo-wordmark">ArchWiki</strong>
+	</span>
+</a>
+
+			</div>
+			<div class="mw-header-content">
+			
+<div id="p-search" role="search" class="vector-search-box-vue  vector-search-box-collapses  vector-search-box-show-thumbnail vector-search-box-auto-expand-width vector-search-box">
+	<a href="https://wiki.archlinux.org/title/Special:Search"
+	
+		
+		
+		
+		title="Search ArchWiki [f]"
+		accesskey="f"
+		class="mw-ui-button mw-ui-quiet mw-ui-icon mw-ui-icon-element mw-ui-icon-wikimedia-search search-toggle">
+		<span>Search</span>
+	</a>
+	
+	<div>
+		<form action="https://wiki.archlinux.org/index.php" id="searchform"
+			class="vector-search-box-form">
+			<div id="simpleSearch"
+				class="vector-search-box-inner"
+				 data-search-loc="header-moved">
+				<input class="vector-search-box-input"
+					 type="search" name="search" placeholder="Search ArchWiki" aria-label="Search ArchWiki" autocapitalize="sentences" title="Search ArchWiki [f]" accesskey="f" id="searchInput"
+				>
+				<input type="hidden" name="title" value="Special:Search">
+				<input id="mw-searchButton"
+					 class="searchButton mw-fallbackSearchButton" type="submit" name="fulltext" title="Search the pages for this text" value="Search">
+				<input id="searchButton"
+					 class="searchButton" type="submit" name="go" title="Go to a page with this exact name if it exists" value="Go">
+			</div>
+		</form>
+	</div>
+</div>
+
+			<nav class="vector-user-links" aria-label="Personal tools" role="navigation" >
+	
+
+<div id="p-vector-user-menu-overflow" class="vector-menu mw-portlet mw-portlet-vector-user-menu-overflow vector-user-menu-overflow"  >
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="pt-createaccount-2" class="user-links-collapsible-item mw-list-item"><a href="https://wiki.archlinux.org/index.php?title=Special:CreateAccount&amp;returnto=Wayland" title="You are encouraged to create an account and log in; however, it is not mandatory"><span>Create account</span></a></li></ul>
+		
+	</div>
+</div>
+
+	
+
+<div id="p-personal" class="vector-menu mw-portlet mw-portlet-personal vector-user-menu vector-user-menu-logged-out vector-menu-dropdown"  title="More options" >
+	<input type="checkbox"
+		id="p-personal-checkbox"
+		role="button"
+		aria-haspopup="true"
+		data-event-name="ui.dropdown-p-personal"
+		class="vector-menu-checkbox"
+		
+		
+	/>
+	<label
+		id="p-personal-label"
+		for="p-personal-checkbox"
+		class="vector-menu-heading mw-ui-button mw-ui-quiet mw-ui-icon mw-ui-icon-element mw-ui-icon-ellipsis mw-ui-icon-wikimedia-ellipsis"
+		
+	>
+		<span class="vector-menu-heading-label">Personal tools</span>
+	</label>
+	<div class="vector-menu-content">
+		<div class="vector-user-menu-create-account"><a href="https://wiki.archlinux.org/index.php?title=Special:CreateAccount&amp;returnto=Wayland" class="vector-menu-content-item user-links-collapsible-item" title="You are encouraged to create an account and log in; however, it is not mandatory"><span class="mw-ui-icon mw-ui-icon-userAdd mw-ui-icon-wikimedia-userAdd"></span> <span>Create account</span></a></div>
+<div class="vector-user-menu-login"><a href="https://wiki.archlinux.org/index.php?title=Special:UserLogin&amp;returnto=Wayland" class="vector-menu-content-item vector-menu-content-item-login" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o"><span class="mw-ui-icon mw-ui-icon-logIn mw-ui-icon-wikimedia-logIn"></span> <span>Log in</span></a></div>
+<div class="vector-user-menu-anon-editor">
+	<p>
+		Pages for logged out editors <a href="https://wiki.archlinux.org/title/ArchWiki:Contributing" aria-label="Learn more about editing"><span>learn more</span></a>
+	</p>
+</div>
+
+		<ul class="vector-menu-content-list"><li id="pt-darkmode" class="ext-darkmode-link mw-list-item"><a href="#"><span>Dark mode</span></a></li></ul>
+		
+	</div>
+</div>
+
+</nav>
+
+			</div>
+		</header>
+		<div class="vector-sidebar-container ">
+			<div id="mw-navigation">
+				
+
+<nav id="mw-panel" class="mw-sidebar" aria-label="Site" role="navigation">
+	
+
+<div id="p-navigation" class="vector-menu mw-portlet mw-portlet-navigation vector-menu-portal portal"  >
+	<div
+		id="p-navigation-label"
+		class="vector-menu-heading "
+		
+	>
+		<span class="vector-menu-heading-label">Navigation</span>
+	</div>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="n-mainpage-description" class="mw-list-item"><a href="https://wiki.archlinux.org/title/Main_page" title="Visit the main page [z]" accesskey="z"><span>Main page</span></a></li><li id="n-Table-of-contents" class="mw-list-item"><a href="https://wiki.archlinux.org/title/Table_of_contents"><span>Table of contents</span></a></li><li id="n-portal" class="mw-list-item"><a href="https://wiki.archlinux.org/title/Getting_involved" title="Various ways Archers can contribute to the community"><span>Getting involved</span></a></li><li id="n-currentevents" class="mw-list-item"><a href="https://wiki.archlinux.org/title/ArchWiki:News" title="The latest lowdown on the wiki"><span>Wiki news</span></a></li><li id="n-randompage" class="mw-list-item"><a href="https://wiki.archlinux.org/title/Special:Random" title="Load a random page [x]" accesskey="x"><span>Random page</span></a></li></ul>
+		
+	</div>
+</div>
+
+	
+	
+
+<div id="p-Interaction" class="vector-menu mw-portlet mw-portlet-Interaction vector-menu-portal portal"  >
+	<div
+		id="p-Interaction-label"
+		class="vector-menu-heading "
+		
+	>
+		<span class="vector-menu-heading-label">Interaction</span>
+	</div>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="n-help" class="mw-list-item"><a href="https://wiki.archlinux.org/title/Category:Help" title="Wiki navigation, reading, and editing help"><span>Help</span></a></li><li id="n-Contributing" class="mw-list-item"><a href="https://wiki.archlinux.org/title/ArchWiki:Contributing"><span>Contributing</span></a></li><li id="n-recentchanges" class="mw-list-item"><a href="https://wiki.archlinux.org/title/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r"><span>Recent changes</span></a></li><li id="n-Recent-talks" class="mw-list-item"><a href="https://wiki.archlinux.org/index.php?title=Special:RecentChanges&amp;namespace=all-discussions" rel="nofollow"><span>Recent talks</span></a></li><li id="n-newpages" class="mw-list-item"><a href="https://wiki.archlinux.org/title/Special:NewPages"><span>New pages</span></a></li><li id="n-Statistics" class="mw-list-item"><a href="https://wiki.archlinux.org/title/ArchWiki:Statistics"><span>Statistics</span></a></li><li id="n-Requests" class="mw-list-item"><a href="https://wiki.archlinux.org/title/ArchWiki_talk:Requests"><span>Requests</span></a></li></ul>
+		
+	</div>
+</div>
+
+
+<div id="p-tb" class="vector-menu mw-portlet mw-portlet-tb vector-menu-portal portal"  >
+	<div
+		id="p-tb-label"
+		class="vector-menu-heading "
+		
+	>
+		<span class="vector-menu-heading-label">Tools</span>
+	</div>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="t-whatlinkshere" class="mw-list-item"><a href="https://wiki.archlinux.org/title/Special:WhatLinksHere/Wayland" title="A list of all wiki pages that link here [j]" accesskey="j"><span>What links here</span></a></li><li id="t-recentchangeslinked" class="mw-list-item"><a href="https://wiki.archlinux.org/title/Special:RecentChangesLinked/Wayland" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k"><span>Related changes</span></a></li><li id="t-specialpages" class="mw-list-item"><a href="https://wiki.archlinux.org/title/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q"><span>Special pages</span></a></li><li id="t-print" class="mw-list-item"><a href="javascript:print();" rel="alternate" title="Printable version of this page [p]" accesskey="p"><span>Printable version</span></a></li><li id="t-permalink" class="mw-list-item"><a href="https://wiki.archlinux.org/index.php?title=Wayland&amp;oldid=773197" title="Permanent link to this revision of this page"><span>Permanent link</span></a></li><li id="t-info" class="mw-list-item"><a href="https://wiki.archlinux.org/index.php?title=Wayland&amp;action=info" title="More information about this page"><span>Page information</span></a></li></ul>
+		
+	</div>
+</div>
+
+	
+</nav>
+
+			</div>
+		</div>
+		<div class="vector-sitenotice-container">
+			<div id="siteNotice"></div>
+		</div>
+		<input type="checkbox" id="vector-toc-collapsed-checkbox" class="mw-checkbox-hack-checkbox">
+		<div class="mw-table-of-contents-container">
+			<div class="vector-sticky-toc-container mw-sticky-header-element">
+				<nav id="mw-panel-toc" class="sidebar-toc" role="navigation" aria-labelledby="sidebar-toc-label" data-event-name="ui.sidebar-toc">
+	<div id="sidebar-toc-label" class="sidebar-toc-header">
+		<p class="sidebar-toc-title">
+		Contents
+		<button class="vector-toc-uncollapse-button">move to sidebar</button>
+		<button class="vector-toc-collapse-button">hide</button>
+		</p>
+	</div>
+	<ul class="sidebar-toc-contents" id="mw-panel-toc-list">
+		<li id="toc-mw-content-text"
+			class="sidebar-toc-list-item sidebar-toc-level-1">
+			<a href="#top-page" class="sidebar-toc-link">
+				<div class="sidebar-toc-text">Beginning</div>
+			</a>
+		</li>
+		<li id="toc-Requirements"
+			class="sidebar-toc-list-item sidebar-toc-level-1">
+			<a class="sidebar-toc-link" href="#Requirements">
+				<div class="sidebar-toc-text">
+				<span class="sidebar-toc-numb">1</span>Requirements</div>
+			</a>
+			
+			<ul id="toc-Requirements-sublist" class="sidebar-toc-list">
+			</ul>
+		</li>
+		<li id="toc-Compositors"
+			class="sidebar-toc-list-item sidebar-toc-level-1">
+			<a class="sidebar-toc-link" href="#Compositors">
+				<div class="sidebar-toc-text">
+				<span class="sidebar-toc-numb">2</span>Compositors</div>
+			</a>
+			
+				<button aria-controls="toc-Compositors-sublist" class="mw-ui-icon mw-ui-icon-wikimedia-expand mw-ui-icon-small sidebar-toc-toggle">
+					Toggle Compositors subsection
+				</button>
+			
+			<ul id="toc-Compositors-sublist" class="sidebar-toc-list">
+				<li id="toc-Tiling"
+			class="sidebar-toc-list-item sidebar-toc-level-2">
+			<a class="sidebar-toc-link" href="#Tiling">
+				<div class="sidebar-toc-text">
+				<span class="sidebar-toc-numb">2.1</span>Tiling</div>
+			</a>
+			
+			<ul id="toc-Tiling-sublist" class="sidebar-toc-list">
+			</ul>
+		</li>
+		<li id="toc-Stacking"
+			class="sidebar-toc-list-item sidebar-toc-level-2">
+			<a class="sidebar-toc-link" href="#Stacking">
+				<div class="sidebar-toc-text">
+				<span class="sidebar-toc-numb">2.2</span>Stacking</div>
+			</a>
+			
+			<ul id="toc-Stacking-sublist" class="sidebar-toc-list">
+			</ul>
+		</li>
+		<li id="toc-Other"
+			class="sidebar-toc-list-item sidebar-toc-level-2">
+			<a class="sidebar-toc-link" href="#Other">
+				<div class="sidebar-toc-text">
+				<span class="sidebar-toc-numb">2.3</span>Other</div>
+			</a>
+			
+			<ul id="toc-Other-sublist" class="sidebar-toc-list">
+			</ul>
+		</li>
+	</ul>
+		</li>
+		<li id="toc-Display_managers"
+			class="sidebar-toc-list-item sidebar-toc-level-1">
+			<a class="sidebar-toc-link" href="#Display_managers">
+				<div class="sidebar-toc-text">
+				<span class="sidebar-toc-numb">3</span>Display managers</div>
+			</a>
+			
+			<ul id="toc-Display_managers-sublist" class="sidebar-toc-list">
+			</ul>
+		</li>
+		<li id="toc-GUI_libraries"
+			class="sidebar-toc-list-item sidebar-toc-level-1">
+			<a class="sidebar-toc-link" href="#GUI_libraries">
+				<div class="sidebar-toc-text">
+				<span class="sidebar-toc-numb">4</span>GUI libraries</div>
+			</a>
+			
+				<button aria-controls="toc-GUI_libraries-sublist" class="mw-ui-icon mw-ui-icon-wikimedia-expand mw-ui-icon-small sidebar-toc-toggle">
+					Toggle GUI libraries subsection
+				</button>
+			
+			<ul id="toc-GUI_libraries-sublist" class="sidebar-toc-list">
+				<li id="toc-GTK"
+			class="sidebar-toc-list-item sidebar-toc-level-2">
+			<a class="sidebar-toc-link" href="#GTK">
+				<div class="sidebar-toc-text">
+				<span class="sidebar-toc-numb">4.1</span>GTK</div>
+			</a>
+			
+			<ul id="toc-GTK-sublist" class="sidebar-toc-list">
+			</ul>
+		</li>
+		<li id="toc-Qt"
+			class="sidebar-toc-list-item sidebar-toc-level-2">
+			<a class="sidebar-toc-link" href="#Qt">
+				<div class="sidebar-toc-text">
+				<span class="sidebar-toc-numb">4.2</span>Qt</div>
+			</a>
+			
+			<ul id="toc-Qt-sublist" class="sidebar-toc-list">
+			</ul>
+		</li>
+		<li id="toc-Clutter"
+			class="sidebar-toc-list-item sidebar-toc-level-2">
+			<a class="sidebar-toc-link" href="#Clutter">
+				<div class="sidebar-toc-text">
+				<span class="sidebar-toc-numb">4.3</span>Clutter</div>
+			</a>
+			
+			<ul id="toc-Clutter-sublist" class="sidebar-toc-list">
+			</ul>
+		</li>
+		<li id="toc-SDL2"
+			class="sidebar-toc-list-item sidebar-toc-level-2">
+			<a class="sidebar-toc-link" href="#SDL2">
+				<div class="sidebar-toc-text">
+				<span class="sidebar-toc-numb">4.4</span>SDL2</div>
+			</a>
+			
+			<ul id="toc-SDL2-sublist" class="sidebar-toc-list">
+			</ul>
+		</li>
+		<li id="toc-GLFW"
+			class="sidebar-toc-list-item sidebar-toc-level-2">
+			<a class="sidebar-toc-link" href="#GLFW">
+				<div class="sidebar-toc-text">
+				<span class="sidebar-toc-numb">4.5</span>GLFW</div>
+			</a>
+			
+			<ul id="toc-GLFW-sublist" class="sidebar-toc-list">
+			</ul>
+		</li>
+		<li id="toc-GLEW"
+			class="sidebar-toc-list-item sidebar-toc-level-2">
+			<a class="sidebar-toc-link" href="#GLEW">
+				<div class="sidebar-toc-text">
+				<span class="sidebar-toc-numb">4.6</span>GLEW</div>
+			</a>
+			
+			<ul id="toc-GLEW-sublist" class="sidebar-toc-list">
+			</ul>
+		</li>
+		<li id="toc-EFL"
+			class="sidebar-toc-list-item sidebar-toc-level-2">
+			<a class="sidebar-toc-link" href="#EFL">
+				<div class="sidebar-toc-text">
+				<span class="sidebar-toc-numb">4.7</span>EFL</div>
+			</a>
+			
+			<ul id="toc-EFL-sublist" class="sidebar-toc-list">
+			</ul>
+		</li>
+		<li id="toc-winit"
+			class="sidebar-toc-list-item sidebar-toc-level-2">
+			<a class="sidebar-toc-link" href="#winit">
+				<div class="sidebar-toc-text">
+				<span class="sidebar-toc-numb">4.8</span>winit</div>
+			</a>
+			
+			<ul id="toc-winit-sublist" class="sidebar-toc-list">
+			</ul>
+		</li>
+		<li id="toc-Electron"
+			class="sidebar-toc-list-item sidebar-toc-level-2">
+			<a class="sidebar-toc-link" href="#Electron">
+				<div class="sidebar-toc-text">
+				<span class="sidebar-toc-numb">4.9</span>Electron</div>
+			</a>
+			
+			<ul id="toc-Electron-sublist" class="sidebar-toc-list">
+				<li id="toc-Command_line_flags"
+			class="sidebar-toc-list-item sidebar-toc-level-3">
+			<a class="sidebar-toc-link" href="#Command_line_flags">
+				<div class="sidebar-toc-text">
+				<span class="sidebar-toc-numb">4.9.1</span>Command line flags</div>
+			</a>
+			
+			<ul id="toc-Command_line_flags-sublist" class="sidebar-toc-list">
+			</ul>
+		</li>
+		<li id="toc-Configuration_file"
+			class="sidebar-toc-list-item sidebar-toc-level-3">
+			<a class="sidebar-toc-link" href="#Configuration_file">
+				<div class="sidebar-toc-text">
+				<span class="sidebar-toc-numb">4.9.2</span>Configuration file</div>
+			</a>
+			
+			<ul id="toc-Configuration_file-sublist" class="sidebar-toc-list">
+			</ul>
+		</li>
+		<li id="toc-Older_Electron_versions"
+			class="sidebar-toc-list-item sidebar-toc-level-3">
+			<a class="sidebar-toc-link" href="#Older_Electron_versions">
+				<div class="sidebar-toc-text">
+				<span class="sidebar-toc-numb">4.9.3</span>Older Electron versions</div>
+			</a>
+			
+			<ul id="toc-Older_Electron_versions-sublist" class="sidebar-toc-list">
+			</ul>
+		</li>
+	</ul>
+		</li>
+		<li id="toc-Java"
+			class="sidebar-toc-list-item sidebar-toc-level-2">
+			<a class="sidebar-toc-link" href="#Java">
+				<div class="sidebar-toc-text">
+				<span class="sidebar-toc-numb">4.10</span>Java</div>
+			</a>
+			
+			<ul id="toc-Java-sublist" class="sidebar-toc-list">
+			</ul>
+		</li>
+	</ul>
+		</li>
+		<li id="toc-XWayland"
+			class="sidebar-toc-list-item sidebar-toc-level-1">
+			<a class="sidebar-toc-link" href="#XWayland">
+				<div class="sidebar-toc-text">
+				<span class="sidebar-toc-numb">5</span>XWayland</div>
+			</a>
+			
+				<button aria-controls="toc-XWayland-sublist" class="mw-ui-icon mw-ui-icon-wikimedia-expand mw-ui-icon-small sidebar-toc-toggle">
+					Toggle XWayland subsection
+				</button>
+			
+			<ul id="toc-XWayland-sublist" class="sidebar-toc-list">
+				<li id="toc-Nvidia_driver"
+			class="sidebar-toc-list-item sidebar-toc-level-2">
+			<a class="sidebar-toc-link" href="#Nvidia_driver">
+				<div class="sidebar-toc-text">
+				<span class="sidebar-toc-numb">5.1</span>Nvidia driver</div>
+			</a>
+			
+			<ul id="toc-Nvidia_driver-sublist" class="sidebar-toc-list">
+			</ul>
+		</li>
+	</ul>
+		</li>
+		<li id="toc-Tips_and_tricks"
+			class="sidebar-toc-list-item sidebar-toc-level-1">
+			<a class="sidebar-toc-link" href="#Tips_and_tricks">
+				<div class="sidebar-toc-text">
+				<span class="sidebar-toc-numb">6</span>Tips and tricks</div>
+			</a>
+			
+				<button aria-controls="toc-Tips_and_tricks-sublist" class="mw-ui-icon mw-ui-icon-wikimedia-expand mw-ui-icon-small sidebar-toc-toggle">
+					Toggle Tips and tricks subsection
+				</button>
+			
+			<ul id="toc-Tips_and_tricks-sublist" class="sidebar-toc-list">
+				<li id="toc-Automation"
+			class="sidebar-toc-list-item sidebar-toc-level-2">
+			<a class="sidebar-toc-link" href="#Automation">
+				<div class="sidebar-toc-text">
+				<span class="sidebar-toc-numb">6.1</span>Automation</div>
+			</a>
+			
+			<ul id="toc-Automation-sublist" class="sidebar-toc-list">
+			</ul>
+		</li>
+		<li id="toc-Kwin_Wayland_debug_console"
+			class="sidebar-toc-list-item sidebar-toc-level-2">
+			<a class="sidebar-toc-link" href="#Kwin_Wayland_debug_console">
+				<div class="sidebar-toc-text">
+				<span class="sidebar-toc-numb">6.2</span>Kwin Wayland debug console</div>
+			</a>
+			
+			<ul id="toc-Kwin_Wayland_debug_console-sublist" class="sidebar-toc-list">
+			</ul>
+		</li>
+		<li id="toc-Detect_Xwayland_applications_visually"
+			class="sidebar-toc-list-item sidebar-toc-level-2">
+			<a class="sidebar-toc-link" href="#Detect_Xwayland_applications_visually">
+				<div class="sidebar-toc-text">
+				<span class="sidebar-toc-numb">6.3</span>Detect Xwayland applications visually</div>
+			</a>
+			
+			<ul id="toc-Detect_Xwayland_applications_visually-sublist" class="sidebar-toc-list">
+			</ul>
+		</li>
+		<li id="toc-Remap_keyboard_or_mouse_keys"
+			class="sidebar-toc-list-item sidebar-toc-level-2">
+			<a class="sidebar-toc-link" href="#Remap_keyboard_or_mouse_keys">
+				<div class="sidebar-toc-text">
+				<span class="sidebar-toc-numb">6.4</span>Remap keyboard or mouse keys</div>
+			</a>
+			
+			<ul id="toc-Remap_keyboard_or_mouse_keys-sublist" class="sidebar-toc-list">
+			</ul>
+		</li>
+	</ul>
+		</li>
+		<li id="toc-Troubleshooting"
+			class="sidebar-toc-list-item sidebar-toc-level-1">
+			<a class="sidebar-toc-link" href="#Troubleshooting">
+				<div class="sidebar-toc-text">
+				<span class="sidebar-toc-numb">7</span>Troubleshooting</div>
+			</a>
+			
+				<button aria-controls="toc-Troubleshooting-sublist" class="mw-ui-icon mw-ui-icon-wikimedia-expand mw-ui-icon-small sidebar-toc-toggle">
+					Toggle Troubleshooting subsection
+				</button>
+			
+			<ul id="toc-Troubleshooting-sublist" class="sidebar-toc-list">
+				<li id="toc-Color_correction"
+			class="sidebar-toc-list-item sidebar-toc-level-2">
+			<a class="sidebar-toc-link" href="#Color_correction">
+				<div class="sidebar-toc-text">
+				<span class="sidebar-toc-numb">7.1</span>Color correction</div>
+			</a>
+			
+			<ul id="toc-Color_correction-sublist" class="sidebar-toc-list">
+			</ul>
+		</li>
+		<li id="toc-Slow_motion,_graphical_glitches,_and_crashes"
+			class="sidebar-toc-list-item sidebar-toc-level-2">
+			<a class="sidebar-toc-link" href="#Slow_motion,_graphical_glitches,_and_crashes">
+				<div class="sidebar-toc-text">
+				<span class="sidebar-toc-numb">7.2</span>Slow motion, graphical glitches, and crashes</div>
+			</a>
+			
+			<ul id="toc-Slow_motion,_graphical_glitches,_and_crashes-sublist" class="sidebar-toc-list">
+			</ul>
+		</li>
+		<li id="toc-Remote_display"
+			class="sidebar-toc-list-item sidebar-toc-level-2">
+			<a class="sidebar-toc-link" href="#Remote_display">
+				<div class="sidebar-toc-text">
+				<span class="sidebar-toc-numb">7.3</span>Remote display</div>
+			</a>
+			
+			<ul id="toc-Remote_display-sublist" class="sidebar-toc-list">
+			</ul>
+		</li>
+		<li id="toc-Input_grabbing_in_games,_remote_desktop_and_VM_windows"
+			class="sidebar-toc-list-item sidebar-toc-level-2">
+			<a class="sidebar-toc-link" href="#Input_grabbing_in_games,_remote_desktop_and_VM_windows">
+				<div class="sidebar-toc-text">
+				<span class="sidebar-toc-numb">7.4</span>Input grabbing in games, remote desktop and VM windows</div>
+			</a>
+			
+			<ul id="toc-Input_grabbing_in_games,_remote_desktop_and_VM_windows-sublist" class="sidebar-toc-list">
+			</ul>
+		</li>
+		<li id="toc-GTK_themes_not_working"
+			class="sidebar-toc-list-item sidebar-toc-level-2">
+			<a class="sidebar-toc-link" href="#GTK_themes_not_working">
+				<div class="sidebar-toc-text">
+				<span class="sidebar-toc-numb">7.5</span>GTK themes not working</div>
+			</a>
+			
+			<ul id="toc-GTK_themes_not_working-sublist" class="sidebar-toc-list">
+			</ul>
+		</li>
+		<li id="toc-Avoid_loading_NVIDIA_modules"
+			class="sidebar-toc-list-item sidebar-toc-level-2">
+			<a class="sidebar-toc-link" href="#Avoid_loading_NVIDIA_modules">
+				<div class="sidebar-toc-text">
+				<span class="sidebar-toc-numb">7.6</span>Avoid loading NVIDIA modules</div>
+			</a>
+			
+			<ul id="toc-Avoid_loading_NVIDIA_modules-sublist" class="sidebar-toc-list">
+			</ul>
+		</li>
+		<li id="toc-Magnifying/surface_scaling"
+			class="sidebar-toc-list-item sidebar-toc-level-2">
+			<a class="sidebar-toc-link" href="#Magnifying/surface_scaling">
+				<div class="sidebar-toc-text">
+				<span class="sidebar-toc-numb">7.7</span>Magnifying/surface scaling</div>
+			</a>
+			
+			<ul id="toc-Magnifying/surface_scaling-sublist" class="sidebar-toc-list">
+			</ul>
+		</li>
+	</ul>
+		</li>
+		<li id="toc-See_also"
+			class="sidebar-toc-list-item sidebar-toc-level-1">
+			<a class="sidebar-toc-link" href="#See_also">
+				<div class="sidebar-toc-text">
+				<span class="sidebar-toc-numb">8</span>See also</div>
+			</a>
+			
+			<ul id="toc-See_also-sublist" class="sidebar-toc-list">
+			</ul>
+		</li>
+	</ul>
+</nav>
+
+			</div>
+		</div>
+		<div class="mw-content-container">
+			<main id="content" class="mw-body" role="main">
+				<a id="top"></a>
+				<header class="mw-body-header">
+				            
+            
+            <div id="p-lang-btn" class="vector-menu mw-portlet-empty vector-menu-dropdown"  >
+            	<input type="checkbox"
+            		id="p-lang-btn-checkbox"
+            		role="button"
+            		aria-haspopup="true"
+            		data-event-name="ui.dropdown-p-lang-btn"
+            		class="vector-menu-checkbox  mw-interlanguage-selector "
+            		aria-label="Go to an article in another language. Available in 5 languages"
+            		
+            	/>
+            	<label
+            		id="p-lang-btn-label"
+            		for="p-lang-btn-checkbox"
+            		class="vector-menu-heading mw-ui-progressive mw-portlet-lang-heading-5 mw-ui-button mw-ui-quiet"
+            		
+            	>
+            		<span class="mw-ui-icon mw-ui-icon-language-progressive mw-ui-icon-wikimedia-language-progressive"></span><span class="vector-menu-heading-label">5 languages</span>
+            	</label>
+            	<div class="vector-menu-content">
+            		
+            		<ul class="vector-menu-content-list"><li class="interlanguage-link interwiki-es mw-list-item"><a href="https://wiki.archlinux.org/title/Wayland_(Español)" title="Wayland – español" lang="es" hreflang="es" class="interlanguage-link-target"><span>Español</span></a></li><li class="interlanguage-link interwiki-ja mw-list-item"><a href="https://wiki.archlinux.jp/index.php/Wayland" title="Wayland – 日本語" lang="ja" hreflang="ja" class="interlanguage-link-target"><span>日本語</span></a></li><li class="interlanguage-link interwiki-pt mw-list-item"><a href="https://wiki.archlinux.org/title/Wayland_(Português)" title="Wayland – português" lang="pt" hreflang="pt" class="interlanguage-link-target"><span>Português</span></a></li><li class="interlanguage-link interwiki-ru mw-list-item"><a href="https://wiki.archlinux.org/title/Wayland_(Русский)" title="Wayland – русский" lang="ru" hreflang="ru" class="interlanguage-link-target"><span>Русский</span></a></li><li class="interlanguage-link interwiki-zh-hans mw-list-item"><a href="https://wiki.archlinuxcn.org/wiki/Wayland" title="Wayland – 中文（简体）" lang="zh-Hans" hreflang="zh-Hans" class="interlanguage-link-target"><span>中文（简体）</span></a></li></ul>
+            		
+            	</div>
+            </div>
+
+				
+					<label
+						id="vector-toc-collapsed-button"
+						class="mw-ui-button mw-ui-quiet mw-ui-icon mw-ui-icon-element mw-ui-icon-wikimedia-listBullet mw-checkbox-hack-button"
+						for="vector-toc-collapsed-checkbox"
+						role="button"
+						aria-controls="toc-toggle-list"
+						data-event-name="vector.toc-toggle-list"
+						tabindex="0"
+						title="Table of Contents">
+						Toggle the table of contents
+					</label>
+				    <h1 id="firstHeading" class="firstHeading mw-first-heading"><span class="mw-page-title-main">Wayland</span></h1>
+				</header>
+				<nav class="vector-article-toolbar" aria-label="Tools"
+					role="navigation">
+					<div class="mw-article-toolbar-container">
+						<div id="left-navigation">
+							
+
+<div id="p-associated-pages" class="vector-menu mw-portlet mw-portlet-associated-pages vector-menu-tabs"  >
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="ca-nstab-main" class="selected mw-list-item"><a href="https://wiki.archlinux.org/title/Wayland" title="View the content page [c]" accesskey="c"><span>Page</span></a></li><li id="ca-talk" class="mw-list-item"><a href="https://wiki.archlinux.org/title/Talk:Wayland" rel="discussion" title="Discussion about the content page [t]" accesskey="t"><span>Discussion</span></a></li></ul>
+		
+	</div>
+</div>
+
+							
+
+<div id="p-variants" class="vector-menu mw-portlet mw-portlet-variants emptyPortlet vector-menu-dropdown"  >
+	<input type="checkbox"
+		id="p-variants-checkbox"
+		role="button"
+		aria-haspopup="true"
+		data-event-name="ui.dropdown-p-variants"
+		class="vector-menu-checkbox"
+		aria-label="Change language variant"
+		
+	/>
+	<label
+		id="p-variants-label"
+		for="p-variants-checkbox"
+		class="vector-menu-heading "
+		
+	>
+		<span class="vector-menu-heading-label">English</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"></ul>
+		
+	</div>
+</div>
+
+						</div>
+						<div id="right-navigation" class="vector-collapsible ">
+							
+
+<div id="p-views" class="vector-menu mw-portlet mw-portlet-views vector-menu-tabs"  >
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="ca-view" class="selected mw-list-item"><a href="https://wiki.archlinux.org/title/Wayland"><span>Read</span></a></li><li id="ca-viewsource" class="mw-list-item"><a href="https://wiki.archlinux.org/index.php?title=Wayland&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e"><span>View source</span></a></li><li id="ca-history" class="mw-list-item"><a href="https://wiki.archlinux.org/index.php?title=Wayland&amp;action=history" title="Past revisions of this page [h]" accesskey="h"><span>View history</span></a></li></ul>
+		
+	</div>
+</div>
+
+							
+
+<div id="p-cactions" class="vector-menu mw-portlet mw-portlet-cactions emptyPortlet vector-menu-dropdown vector-has-collapsible-items"  title="More options" >
+	<input type="checkbox"
+		id="p-cactions-checkbox"
+		role="button"
+		aria-haspopup="true"
+		data-event-name="ui.dropdown-p-cactions"
+		class="vector-menu-checkbox"
+		
+		
+	/>
+	<label
+		id="p-cactions-label"
+		for="p-cactions-checkbox"
+		class="vector-menu-heading "
+		
+	>
+		<span class="vector-menu-heading-label">More</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="ca-more-view" class="selected vector-more-collapsible-item mw-list-item"><a href="https://wiki.archlinux.org/title/Wayland"><span>Read</span></a></li><li id="ca-more-viewsource" class="vector-more-collapsible-item mw-list-item"><a href="https://wiki.archlinux.org/index.php?title=Wayland&amp;action=edit"><span>View source</span></a></li><li id="ca-more-history" class="vector-more-collapsible-item mw-list-item"><a href="https://wiki.archlinux.org/index.php?title=Wayland&amp;action=history"><span>View history</span></a></li></ul>
+		
+	</div>
+</div>
+
+						</div>
+					</div>
+				</nav>
+				<div id="bodyContent" class="vector-body" data-mw-ve-target-container>
+					<div class="mw-body-subheader">
+					        <div class="mw-indicators">
+        </div>
+
+					    <div id="siteSub" class="noprint">From ArchWiki</div>
+					</div>
+					
+					
+					
+					<div id="mw-content-text" class="mw-body-content mw-content-ltr" lang="en" dir="ltr"><div class="mw-parser-output"><div class="archwiki-template-meta-related-articles-start"><p class="mw-no-invert">Related articles</p><ul>
+<li><a href="https://wiki.archlinux.org/title/KMS" class="mw-redirect" title="KMS">KMS</a></li>
+<li><a href="https://wiki.archlinux.org/title/Xorg" title="Xorg">Xorg</a></li>
+<li><a href="https://wiki.archlinux.org/title/Screen_capture#Wayland" title="Screen capture">Screen capture#Wayland</a></li>
+</ul></div>
+<p><a rel="nofollow" class="external text" href="https://wayland.freedesktop.org/">Wayland</a> is a display server protocol. It is aimed to become the successor of the <a href="https://wiki.archlinux.org/title/X_Window_System" class="mw-redirect" title="X Window System">X Window System</a>. You can find a <a href="https://en.wikipedia.org/wiki/Wayland_(display_server_protocol)#Differences_between_Wayland_and_X" class="extiw" title="wikipedia:Wayland (display server protocol)">comparison between Wayland and Xorg on Wikipedia</a>.
+</p><p>Display servers using the Wayland protocol are called <b>compositors</b> because they also act as <a href="https://en.wikipedia.org/wiki/Compositing_window_manager" class="extiw" title="wikipedia:Compositing window manager">compositing window managers</a>. Below you can find a <a href="#Compositors">list of Wayland compositors</a>.
+</p><p>For compatibility with native <a href="https://wiki.archlinux.org/title/X11" class="mw-redirect" title="X11">X11</a> applications to run them seamlessly, <a href="#XWayland">XWayland</a> can be used, which provides an X Server in Wayland.
+</p>
+<mw:tocplace></mw:tocplace>
+<h2><span class="mw-headline" id="Requirements">Requirements</span></h2>
+<p>Most Wayland compositors only work on systems using <a href="https://wiki.archlinux.org/title/Kernel_mode_setting" title="Kernel mode setting">Kernel mode setting</a>. Wayland by itself does not provide a graphical environment; for this you also need a compositor (see the following section), or a desktop environment that includes a compositor (e.g. <a href="https://wiki.archlinux.org/title/GNOME" title="GNOME">GNOME</a> or <a href="https://wiki.archlinux.org/title/KDE" title="KDE">KDE</a>).
+</p><p>For the <a href="https://wiki.archlinux.org/title/Xorg#Driver_installation" title="Xorg">GPU driver</a> and Wayland compositor to be compatible they must support the same buffer API. There are two main APIs: <a href="https://en.wikipedia.org/wiki/Generic_Buffer_Management" class="extiw" title="wikipedia:Generic Buffer Management">GBM</a> and <a rel="nofollow" class="external text" href="https://www.phoronix.com/scan.php?page=news_item&amp;px=XDC2016-Device-Memory-API">EGLStreams</a>.
+</p>
+<table class="wikitable">
+
+<tbody><tr>
+<th>Buffer API</th>
+<th>GPU driver support</th>
+<th>Wayland compositor support
+</th></tr>
+<tr>
+<td>GBM</td>
+<td>All except <a href="https://wiki.archlinux.org/title/NVIDIA" title="NVIDIA">NVIDIA</a> &lt; 495*</td>
+<td>All
+</td></tr>
+<tr>
+<td>EGLStreams</td>
+<td><a href="https://wiki.archlinux.org/title/NVIDIA" title="NVIDIA">NVIDIA</a></td>
+<td><a href="https://wiki.archlinux.org/title/GNOME" title="GNOME">GNOME</a>, <a href="https://wiki.archlinux.org/title/Weston" title="Weston">Weston</a> (with a third-party patch)
+</td></tr>
+</tbody></table>
+<dl><dd>* NVIDIA ≥ 495 supports both EGLStreams and GBM.<a rel="nofollow" class="external autonumber" href="https://www.phoronix.com/scan.php?page=news_item&amp;px=NVIDIA-495.44-Linux-Driver">[1]</a></dd></dl>
+<p>Since NVIDIA introduced GBM support, many compositors (including Mutter and KWin) started using it by default for NVIDIA ≥ 495. GBM is generally considered better with wider support, and EGLStreams only had support because NVIDIA did not provide any alternative way to use their GPUs under Wayland with their proprietary drivers. Furthermore, KWin <a rel="nofollow" class="external text" href="https://invent.kde.org/plasma/kwin/-/merge_requests/1638">dropped support for EGLStreams</a> after GBM was introduced into NVIDIA. 
+</p><p>If you use a popular desktop environment/compositor and a GPU still supported by NVIDIA, you are most likely already using GBM backend. To check, run <code>journalctl -b 0 --grep "renderer for"</code>. To force GBM as a backend, set the following <a href="https://wiki.archlinux.org/title/Environment_variables" title="Environment variables">environment variables</a>:
+</p>
+<pre>GBM_BACKEND=nvidia-drm
+__GLX_VENDOR_LIBRARY_NAME=nvidia
+</pre>
+<h2><span class="mw-headline" id="Compositors">Compositors</span></h2>
+<p>See <a href="https://wiki.archlinux.org/title/Window_manager#Types" title="Window manager">Window manager#Types</a> for the difference between <b>Tiling</b> and <b>Stacking</b>.
+</p>
+<h3><span class="mw-headline" id="Tiling">Tiling</span></h3>
+<ul><li><b><a href="https://wiki.archlinux.org/title/Cagebreak" title="Cagebreak">Cagebreak</a></b> &#8212; Based on cage, inspired by <a href="https://wiki.archlinux.org/title/Ratpoison" title="Ratpoison">ratpoison</a>.</li></ul>
+<dl><dd><a rel="nofollow" class="external free" href="https://github.com/project-repo/cagebreak">https://github.com/project-repo/cagebreak</a> || <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://aur.archlinux.org/packages/cagebreak/">cagebreak</a></span><sup><small>AUR</small></sup></dd></dl>
+<ul><li><b>Cardboard</b> &#8212; Scrolling compositor, inspired by PaperWM, based on wlroots.</li></ul>
+<dl><dd><a rel="nofollow" class="external free" href="https://gitlab.com/cardboardwm/cardboard">https://gitlab.com/cardboardwm/cardboard</a> || <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://aur.archlinux.org/packages/cardboard-git/">cardboard-git</a></span><sup><small>AUR</small></sup></dd></dl>
+<ul><li><b>dwl</b> &#8212; <a href="https://wiki.archlinux.org/title/Dwm" title="Dwm">dwm</a>-like Wayland compositor based on wlroots.</li></ul>
+<dl><dd><a rel="nofollow" class="external free" href="https://github.com/djpohly/dwl">https://github.com/djpohly/dwl</a> || <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://aur.archlinux.org/packages/dwl/">dwl</a></span><sup><small>AUR</small></sup></dd></dl>
+<ul><li><b><a href="https://wiki.archlinux.org/title/Hyprland" title="Hyprland">Hyprland</a></b> &#8212; A dynamic tiling Wayland compositor that does not sacrifice on its looks.</li></ul>
+<dl><dd><a rel="nofollow" class="external free" href="https://hyprland.org/">https://hyprland.org</a> || <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://aur.archlinux.org/packages/hyprland/">hyprland</a></span><sup><small>AUR</small></sup></dd></dl>
+<ul><li><b>japokwm</b> &#8212; Dynamic Wayland tiling compositor based around creating layouts, based on wlroots.</li></ul>
+<dl><dd><a rel="nofollow" class="external free" href="https://github.com/werererer/japokwm">https://github.com/werererer/japokwm</a> || <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://aur.archlinux.org/packages/japokwm-git/">japokwm-git</a></span><sup><small>AUR</small></sup></dd></dl>
+<ul><li><b>newm</b> &#8212; Wayland compositor written with laptops and touchpads in mind <i>(currently unmaintained)</i>.</li></ul>
+<dl><dd><a rel="nofollow" class="external free" href="https://github.com/jbuchermn/newm/">https://github.com/jbuchermn/newm/</a> || <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://aur.archlinux.org/packages/newm-git/">newm-git</a></span><sup><small>AUR</small></sup></dd></dl>
+<ul><li><b><a href="https://wiki.archlinux.org/title/Qtile" title="Qtile">Qtile</a></b> &#8212; A full-featured, hackable tiling window manager and Wayland compositor written and configured in Python.</li></ul>
+<dl><dd><a rel="nofollow" class="external free" href="https://github.com/qtile/qtile">https://github.com/qtile/qtile</a> || <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://archlinux.org/packages/?name=qtile">qtile</a></span></dd></dl>
+<ul><li><b>river</b> &#8212; Dynamic tiling Wayland compositor inspired by dwm and <a href="https://wiki.archlinux.org/title/Bspwm" title="Bspwm">bspwm</a>.</li></ul>
+<dl><dd><a rel="nofollow" class="external free" href="https://github.com/ifreund/river">https://github.com/ifreund/river</a> || <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://archlinux.org/packages/?name=river">river</a></span></dd></dl>
+<ul><li><b><a href="https://wiki.archlinux.org/title/Sway" title="Sway">Sway</a></b> &#8212; <a href="https://wiki.archlinux.org/title/I3" title="I3">i3</a>-compatible Wayland compositor based on wlroots.</li></ul>
+<dl><dd><a rel="nofollow" class="external free" href="https://github.com/swaywm/sway">https://github.com/swaywm/sway</a> || <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://archlinux.org/packages/?name=sway">sway</a></span></dd></dl>
+<ul><li><b>Velox</b> &#8212; Simple window manager based on swc, inspired by dwm and <a href="https://wiki.archlinux.org/title/Xmonad" title="Xmonad">xmonad</a>.</li></ul>
+<dl><dd><a rel="nofollow" class="external free" href="https://github.com/michaelforney/velox">https://github.com/michaelforney/velox</a> || <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://aur.archlinux.org/packages/velox-git/">velox-git</a></span><sup><small>AUR</small></sup></dd></dl>
+<ul><li><b>Vivarium</b> &#8212; A dynamic tiling Wayland compositor using wlroots, with desktop semantics inspired by <a href="https://wiki.archlinux.org/title/Xmonad" title="Xmonad">xmonad</a>.</li></ul>
+<dl><dd><a rel="nofollow" class="external free" href="https://github.com/inclement/vivarium">https://github.com/inclement/vivarium</a> || <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://aur.archlinux.org/packages/vivarium-git/">vivarium-git</a></span><sup><small>AUR</small></sup></dd></dl>
+<ul><li><b>waymonad</b> &#8212; Wayland compositor inspired by xmonad written in <a href="https://wiki.archlinux.org/title/Haskell" title="Haskell">Haskell</a>.</li></ul>
+<dl><dd><a rel="nofollow" class="external free" href="https://github.com/waymonad/waymonad">https://github.com/waymonad/waymonad</a> || <small>not packaged? <a rel="nofollow" class="external text" href="https://aur.archlinux.org/packages/">search in AUR</a></small></dd></dl>
+<h3><span class="mw-headline" id="Stacking">Stacking</span></h3>
+<ul><li><b><a href="https://wiki.archlinux.org/title/Enlightenment" title="Enlightenment">Enlightenment</a></b> &#8212; See <a href="https://wiki.archlinux.org/title/Enlightenment#Manually" title="Enlightenment">Enlightenment#Manually</a>. More Info: <a rel="nofollow" class="external autonumber" href="https://git.enlightenment.org/core/enlightenment.git/tree/README">[2]</a><sup title="Last check status: 404">[<a href="https://en.wikipedia.org/wiki/Wikipedia:Link_rot" class="extiw" title="wikipedia:Wikipedia:Link rot">dead link</a> 2022-09-23&#160;&#9432;]</sup> <a rel="nofollow" class="external autonumber" href="https://www.enlightenment.org/about-wayland">[3]</a></li></ul>
+<dl><dd><a rel="nofollow" class="external free" href="https://www.enlightenment.org/">https://www.enlightenment.org/</a> || <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://archlinux.org/packages/?name=enlightenment">enlightenment</a></span></dd></dl>
+<ul><li><b>Greenfield</b> &#8212; Runs in a web browser and can display remote applications.</li></ul>
+<dl><dd><a rel="nofollow" class="external free" href="https://greenfield.app/">https://greenfield.app/</a> || <small>not packaged? <a rel="nofollow" class="external text" href="https://aur.archlinux.org/packages/">search in AUR</a></small></dd></dl>
+<ul><li><b>Grefsen</b> &#8212; Qt/Wayland compositor providing a minimal desktop environment.</li></ul>
+<dl><dd><a rel="nofollow" class="external free" href="https://github.com/ec1oud/grefsen">https://github.com/ec1oud/grefsen</a> || <small>not packaged? <a rel="nofollow" class="external text" href="https://aur.archlinux.org/packages/">search in AUR</a></small></dd></dl>
+<ul><li><b>hikari</b> &#8212; wlroots-based compositor inspired by <a href="https://wiki.archlinux.org/title/Cwm" title="Cwm">cwm</a> which is actively developed on FreeBSD but also supports Linux.</li></ul>
+<dl><dd><a rel="nofollow" class="external free" href="https://hikari.acmelabs.space/">https://hikari.acmelabs.space/</a> || <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://aur.archlinux.org/packages/hikari/">hikari</a></span><sup><small>AUR</small></sup></dd></dl>
+<ul><li><b>KDE <a href="https://en.wikipedia.org/wiki/KWin" class="extiw" title="w:KWin">KWin</a></b> &#8212; See <a href="https://wiki.archlinux.org/title/KDE#Starting_Plasma" title="KDE">KDE#Starting Plasma</a>.</li></ul>
+<dl><dd><a rel="nofollow" class="external free" href="https://userbase.kde.org/KWin">https://userbase.kde.org/KWin</a> || <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://archlinux.org/packages/?name=kwin">kwin</a></span></dd></dl>
+<ul><li><b>Liri Shell</b> &#8212; Part of <a href="https://wiki.archlinux.org/title/Liri" title="Liri">Liri</a>, built using QtQuick and QtCompositor as a compositor for Wayland.</li></ul>
+<dl><dd><a rel="nofollow" class="external free" href="https://github.com/lirios/shell">https://github.com/lirios/shell</a> || <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://aur.archlinux.org/packages/liri-shell-git/">liri-shell-git</a></span><sup><small>AUR</small></sup></dd></dl>
+<ul><li><b>labwc</b> &#8212; wlroots-based compositor inspired by Openbox.</li></ul>
+<dl><dd><a rel="nofollow" class="external free" href="https://github.com/labwc/labwc">https://github.com/labwc/labwc</a> || <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://aur.archlinux.org/packages/labwc-git/">labwc-git</a></span><sup><small>AUR</small></sup></dd></dl>
+<ul><li><b><a href="https://en.wikipedia.org/wiki/Mutter_(software)" class="extiw" title="w:Mutter (software)">Mutter</a></b> &#8212; See <a href="https://wiki.archlinux.org/title/GNOME#Starting" title="GNOME">GNOME#Starting</a>.</li></ul>
+<dl><dd><a rel="nofollow" class="external free" href="https://gitlab.gnome.org/GNOME/mutter">https://gitlab.gnome.org/GNOME/mutter</a> || <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://archlinux.org/packages/?name=mutter">mutter</a></span></dd></dl>
+<ul><li><b>wayfire</b> &#8212; 3D compositor inspired by <a href="https://wiki.archlinux.org/title/Compiz" title="Compiz">Compiz</a> and based on wlroots.</li></ul>
+<dl><dd><a rel="nofollow" class="external free" href="https://wayfire.org/">https://wayfire.org/</a> || <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://aur.archlinux.org/packages/wayfire/">wayfire</a></span><sup><small>AUR</small></sup></dd></dl>
+<ul><li><b><a href="https://wiki.archlinux.org/title/Weston" title="Weston">Weston</a></b> &#8212; Wayland compositor designed for correctness, reliability, predictability, and performance.</li></ul>
+<dl><dd><a rel="nofollow" class="external free" href="https://gitlab.freedesktop.org/wayland/weston">https://gitlab.freedesktop.org/wayland/weston</a> || <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://archlinux.org/packages/?name=weston">weston</a></span></dd></dl>
+<ul><li><b>wio</b> &#8212; wlroots-based compositor that aims to replicate the look and feel of Plan 9's Rio desktop.</li></ul>
+<dl><dd><a rel="nofollow" class="external free" href="https://wio-project.org/">https://wio-project.org/</a><sup title="Last check status: SSL error">[<a href="https://en.wikipedia.org/wiki/Wikipedia:Link_rot" class="extiw" title="wikipedia:Wikipedia:Link rot">dead link</a> 2022-09-23&#160;&#9432;]</sup> || <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://aur.archlinux.org/packages/wio-wl/">wio-wl</a></span><sup><small>AUR</small></sup></dd></dl>
+<h3><span class="mw-headline" id="Other">Other</span></h3>
+<ul><li><b>Cage</b> &#8212; Displays a single fullscreen application like a kiosk.</li></ul>
+<dl><dd><a rel="nofollow" class="external free" href="https://www.hjdskes.nl/projects/cage/">https://www.hjdskes.nl/projects/cage/</a> || <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://archlinux.org/packages/?name=cage">cage</a></span></dd></dl>
+<ul><li><b>nwg-shell</b> &#8212; A GTK-based shell for the sway Wayland compositor.</li></ul>
+<dl><dd><a rel="nofollow" class="external free" href="https://github.com/nwg-piotr/nwg-shell">https://github.com/nwg-piotr/nwg-shell</a> || <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://aur.archlinux.org/packages/nwg-shell/">nwg-shell</a></span><sup><small>AUR</small></sup></dd></dl>
+<ul><li><b>kiwmi</b> &#8212; A fully programmable Wayland Compositor.</li></ul>
+<dl><dd><a rel="nofollow" class="external free" href="https://github.com/buffet/kiwmi">https://github.com/buffet/kiwmi</a> || <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://aur.archlinux.org/packages/kiwmi-git/">kiwmi-git</a></span><sup><small>AUR</small></sup></dd></dl>
+<p>Some of the above may support <a href="https://wiki.archlinux.org/title/Display_manager" title="Display manager">display managers</a>. Check <code>/usr/share/wayland-sessions/<i>compositor</i>.desktop</code> to see how they are started.
+</p>
+<h2><span class="mw-headline" id="Display_managers">Display managers</span></h2>
+<p>Display managers listed below support launching Wayland compositors. 
+</p>
+<table class="wikitable sortable">
+<tbody><tr>
+<th>Name
+</th>
+<th>Runs itself on Wayland?
+</th>
+<th>Description
+</th></tr>
+<tr>
+<td><a href="https://wiki.archlinux.org/title/GDM" title="GDM">GDM</a>
+</td>
+<td data-sort-value="5" style="background: #afa; color: inherit; vertical-align: middle; text-align: center;">Yes
+</td>
+<td><a href="https://wiki.archlinux.org/title/GNOME" title="GNOME">GNOME</a> display manager.
+</td></tr>
+<tr>
+<td><a href="https://wiki.archlinux.org/title/Greetd" title="Greetd">greetd</a>
+</td>
+<td data-sort-value="3" style="background: #ffa; color: inherit; vertical-align: middle; text-align: center;">Wayland greeter available
+</td>
+<td>Minimal and flexible login daemon.
+</td></tr>
+<tr>
+<td><a href="https://wiki.archlinux.org/title/LightDM" title="LightDM">LightDM</a>
+</td>
+<td data-sort-value="1" style="background: #faa; color: inherit; vertical-align: middle; text-align: center;">No
+</td>
+<td>Cross-desktop display manager.
+</td></tr>
+<tr>
+<td><a href="https://wiki.archlinux.org/title/Ly" class="mw-redirect" title="Ly">Ly</a>
+</td>
+<td data-sort-value="1" style="background: #faa; color: inherit; vertical-align: middle; text-align: center;">No
+</td>
+<td>TUI display manager written in C
+</td></tr>
+<tr>
+<td><a href="https://wiki.archlinux.org/title/SDDM" title="SDDM">SDDM</a>
+</td>
+<td data-sort-value="3" style="background: #ffa; color: inherit; vertical-align: middle; text-align: center;">Only with <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://aur.archlinux.org/packages/sddm-git/">sddm-git</a></span><sup><small>AUR</small></sup>
+</td>
+<td>QML-based display manager.
+</td></tr>
+<tr>
+<td><a href="https://wiki.archlinux.org/title/Tbsm" class="mw-redirect" title="Tbsm">tbsm</a>
+</td>
+<td data-sort-value="1" style="background: #faa; color: inherit; vertical-align: middle; text-align: center;">No
+</td>
+<td>Simple CLI session launcher written in pure bash.
+</td></tr></tbody></table>
+<h2><span class="mw-headline" id="GUI_libraries">GUI libraries</span></h2>
+<p>See details on the <a rel="nofollow" class="external text" href="https://wayland.freedesktop.org/toolkits.html">official website</a>.
+</p>
+<h3><span class="mw-headline" id="GTK">GTK</span></h3>
+<p>The <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://archlinux.org/packages/?name=gtk3">gtk3</a></span> and <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://archlinux.org/packages/?name=gtk4">gtk4</a></span> packages have the Wayland backend enabled. GTK will default to the Wayland backend, but it is possible to override it to Xwayland by modifying an environment variable: <code>GDK_BACKEND=x11</code>.
+</p><p>For theming issues, see <a href="https://wiki.archlinux.org/title/GTK#Wayland_backend" title="GTK">GTK#Wayland backend</a>.
+</p>
+<h3><span class="mw-headline" id="Qt">Qt</span></h3>
+<p>To enable Wayland support in <a href="https://wiki.archlinux.org/title/Qt" title="Qt">Qt</a> 5 or 6, install the <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://archlinux.org/packages/?name=qt5-wayland">qt5-wayland</a></span> or <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://archlinux.org/packages/?name=qt6-wayland">qt6-wayland</a></span> package, respectively.
+</p><p>To run a Qt application with the Wayland plugin <a rel="nofollow" class="external autonumber" href="https://wiki.qt.io/QtWayland#How_do_I_use_QtWayland.3F">[4]</a>, use <code>-platform wayland</code> or <code>QT_QPA_PLATFORM=wayland</code> <a href="https://wiki.archlinux.org/title/Environment_variable" class="mw-redirect" title="Environment variable">environment variable</a>. To force the usage of <a href="https://wiki.archlinux.org/title/X11" class="mw-redirect" title="X11">X11</a> on a Wayland session, use <code>QT_QPA_PLATFORM=xcb</code>. This might be necessary for some proprietary applications that do not use the system's implementation of Qt, such as <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://aur.archlinux.org/packages/zoom/">zoom</a></span><sup><small>AUR</small></sup>.
+<code>QT_QPA_PLATFORM="wayland;xcb"</code> allows Qt to use the xcb (X11) plugin instead if Wayland is not available.<a rel="nofollow" class="external autonumber" href="https://www.qt.io/blog/2018/05/29/whats-new-in-qt-5-11-for-the-wayland-platform-plugin">[5]</a>
+</p><p>On some compositors, for example <a href="https://wiki.archlinux.org/title/Sway" title="Sway">sway</a>, Qt applications running natively might have missing functionality. For example, <a rel="nofollow" class="external text" href="https://keepassxc.org/">KeepassXC</a> will be unable to minimize to tray. This can be solved by installing <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://archlinux.org/packages/?name=qt5ct">qt5ct</a></span> and setting <code>QT_QPA_PLATFORMTHEME=qt5ct</code> before running the application.
+</p>
+<h3><span class="mw-headline" id="Clutter">Clutter</span></h3>
+<p>The Clutter toolkit has a Wayland backend that allows it to run as a Wayland client. The backend is enabled in the <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://archlinux.org/packages/?name=clutter">clutter</a></span> package.
+</p><p>To run a Clutter application on Wayland, set <code>CLUTTER_BACKEND=wayland</code>.
+</p>
+<h3><span class="mw-headline" id="SDL2">SDL2</span></h3>
+<p>As of SDL2 version 2.0.22, SDL <a rel="nofollow" class="external text" href="https://github.com/libsdl-org/SDL/pull/4306">defaults to preferring Wayland over X11.</a>
+</p>
+<div class="archwiki-template-box archwiki-template-box-note"><strong>Note:</strong> Many proprietary games come bundled with old versions of SDL, which do not support Wayland and might break entirely if the use of Wayland is forced with <code>SDL_VIDEODRIVER=wayland</code>. To force the application to run with XWayland, set <code>SDL_VIDEODRIVER=x11</code>.</div>
+<h3><span class="mw-headline" id="GLFW">GLFW</span></h3>
+<p>To use GLFW with the Wayland backend, install the <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://archlinux.org/packages/?name=glfw-wayland">glfw-wayland</a></span> package (instead of <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://archlinux.org/packages/?name=glfw-x11">glfw-x11</a></span>).
+</p>
+<h3><span class="mw-headline" id="GLEW">GLEW</span></h3>
+<p>The <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://aur.archlinux.org/packages/glew-wayland/">glew-wayland</a></span><sup><small>AUR</small></sup> package currently still does not work with a lot of GLEW-based applications, so the only option is to use <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://archlinux.org/packages/?name=glew">glew</a></span> with Xwayland. See <a rel="nofollow" class="external text" href="https://bugs.archlinux.org/task/62713">FS#62713</a>.
+</p>
+<h3><span class="mw-headline" id="EFL">EFL</span></h3>
+<p>EFL has complete Wayland support. To run a EFL application on Wayland, see Wayland <a rel="nofollow" class="external text" href="https://wayland.freedesktop.org/efl.html">project page</a>.
+</p>
+<h3><span class="mw-headline" id="winit">winit</span></h3>
+<p>Winit is a window handling library in Rust. It will default to the Wayland backend, but it is possible to override it to Xwayland by modifying an environment variable: <code>WINIT_UNIX_BACKEND=x11</code>.
+</p>
+<h3><span class="mw-headline" id="Electron">Electron</span></h3>
+<p>Wayland support can be activated either using per-application command line flags or more globally using a configuration file.
+</p>
+<h4><span class="mw-headline" id="Command_line_flags">Command line flags</span></h4>
+<p>To use <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://archlinux.org/packages/?name=electron">electron</a></span>-based applications natively under Wayland, the following flags need to be added to your application exec command line (for Electron 20): <code>--ozone-platform-hint=auto</code>. 
+</p><p>Missing top bars can be solved by additionally using the following flag: <code>--enable-features=WaylandWindowDecorations</code>. This will typically be necessary under <a href="https://wiki.archlinux.org/title/GNOME" title="GNOME">GNOME</a> (supported since <a rel="nofollow" class="external text" href="https://github.com/electron/electron/pull/29618">electron17</a>).
+</p><p>Use <code>--enable-webrtc-pipewire-capturer</code> to solve electron screen capture problem on Wayland. The capture is based on <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://archlinux.org/packages/?name=xdg-desktop-portal">xdg-desktop-portal</a></span>.
+</p><p>Use <code>--gtk-version=4</code> to solve fcitx input issue.
+</p><p>You can do this for instance by <a href="https://wiki.archlinux.org/title/Desktop_entries#Modify_desktop_files" title="Desktop entries">modifying the .desktop file</a> and adding the flags to the end of the <code>Exec=</code> line.
+</p>
+<div class="archwiki-template-box archwiki-template-box-note"><strong>Note:</strong> Some packages, like <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://aur.archlinux.org/packages/visual-studio-code-bin/">visual-studio-code-bin</a></span><sup><small>AUR</small></sup> (<a rel="nofollow" class="external text" href="https://github.com/microsoft/vscode/issues/134612">bug report</a>), do not forward flags to Electron, and thus will need the application developer to implement a solution.</div>
+<h4><span class="mw-headline" id="Configuration_file">Configuration file</span></h4>
+<p>Create or edit the file <code>${XDG_CONFIG_HOME}/electron-flags.conf</code> (defaults to <code>~/.config/electron-flags.conf</code> if <code>${XDG_CONFIG_HOME} </code> is unset) and add the previously mentioned flags (one option per line, with no empty lines):
+</p>
+<pre style="margin-bottom: 0; border-bottom:none; padding-bottom:0.8em;">~/.config/electron-flags.conf</pre>
+<pre style="margin-top: 0; border-top-style:dashed; padding-top: 0.8em;">--enable-features=WaylandWindowDecorations
+--ozone-platform-hint=auto</pre>
+<div class="archwiki-template-box archwiki-template-box-note"><strong>Note:</strong> These configuration files only work for the Electron packages in the official repositories and packages that use them. They do not work for packages that bundle their own build of Electron such as <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://aur.archlinux.org/packages/slack-desktop/">slack-desktop</a></span><sup><small>AUR</small></sup>. Sometimes alternatives exist such as <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://aur.archlinux.org/packages/slack-electron/">slack-electron</a></span><sup><small>AUR</small></sup>.</div>
+<h4><span class="mw-headline" id="Older_Electron_versions">Older Electron versions</span></h4>
+<p><code>electron-flags.conf</code> applies only to the latest version of Electron. Older versions of Electron can be configured using their own <code>electron&lt;version&gt;-flags.conf</code> file. Versioned files can be soft-linked to <code>${XDG_CONFIG_HOME}/electron-flags.conf</code>.
+</p><p>Older versions may also require different flags, depending on the corresponding Chromium version. For example, the following flags work on Electron 13:
+</p>
+<pre style="margin-bottom: 0; border-bottom:none; padding-bottom:0.8em;">~/.config/electron13-flags.conf</pre>
+<pre style="margin-top: 0; border-top-style:dashed; padding-top: 0.8em;">--enable-features=UseOzonePlatform
+--ozone-platform=wayland</pre>
+<h3><span class="mw-headline" id="Java">Java</span></h3>
+<p>The open source implementation of the <a href="https://wiki.archlinux.org/title/Java" title="Java">Java</a> platform OpenJDK, does not yet have native support for Wayland.
+Until <a rel="nofollow" class="external text" href="https://openjdk.java.net/projects/wakefield/">Wakefield</a>, the project that aims to implement Wayland in OpenJDK, is available, XWayland can be used.
+</p><p>See <a href="https://wiki.debian.org/Wayland#Java_Programs_.28supported_since_OpenJDK_16.3F.29" class="extiw" title="debian:Wayland">Debian:Wayland#Java Programs (supported since OpenJDK 16?)</a>: 
+</p>
+<dl><dd>Starting with OpenJDK 16, the JRE can dynamically load GTK3 (which has Wayland support), it appears this might be supported according to this <a rel="nofollow" class="external text" href="https://stackoverflow.com/questions/39197208/java-gui-support-on-wayland">discussion</a>.</dd>
+<dd>The <code>_JAVA_AWT_WM_NONREPARENTING</code> <a href="https://wiki.archlinux.org/title/Environment_variable" class="mw-redirect" title="Environment variable">environment variable</a> can be set to "1" to fix misbehavior where the application starts with a blank screen.</dd></dl>
+<h2><span class="mw-headline" id="XWayland">XWayland</span></h2>
+<p><a rel="nofollow" class="external text" href="https://wayland.freedesktop.org/xserver.html">XWayland</a> is an X server that runs under Wayland and provides compatibility for native <a href="https://wiki.archlinux.org/title/X11" class="mw-redirect" title="X11">X11</a> applications that are yet to provide Wayland support. To use it, <a href="https://wiki.archlinux.org/title/Install" class="mw-redirect" title="Install">install</a> the <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://archlinux.org/packages/?name=xorg-xwayland">xorg-xwayland</a></span> package.
+</p><p>XWayland is started via a compositor, so you should check the documentation for your chosen compositor for XWayland compatibility and instructions on how to start XWayland.
+</p>
+<div class="archwiki-template-box archwiki-template-box-note"><strong>Note:</strong> 
+<ul><li>Security: XWayland is an X server, so it does not have the security features of Wayland</li>
+<li>Performance: XWayland has a <a rel="nofollow" class="external text" href="https://openbenchmarking.org/result/2202053-NE-NVIDIARTX35">nearly identical performance</a> to that of X11. In some cases you might notice degraded performance, especially on NVIDIA cards.</li>
+<li>Compatibility: XWayland isn't fully backward compatible with X11. Some applications may not work properly under XWayland.</li></ul></div>
+<h3><span class="mw-headline" id="Nvidia_driver">Nvidia driver</span></h3>
+<div class="archwiki-template-box archwiki-template-box-note"><strong>Note:</strong> Nvidia drivers prior to version 470 (e.g. <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://aur.archlinux.org/packages/nvidia-390xx-dkms/">nvidia-390xx-dkms</a></span><sup><small>AUR</small></sup>) do not support hardware accelerated XWayland, causing non-Wayland-native applications to suffer from poor performance in Wayland sessions.</div>
+<p>Enabling <a href="https://wiki.archlinux.org/title/NVIDIA#DRM_kernel_mode_setting" title="NVIDIA">DRM KMS</a> is required. There may be additional information in the <a rel="nofollow" class="external text" href="https://download.nvidia.com/XFree86/Linux-x86_64/515.48.07/README/xwayland.html">official documentation</a> regarding your display manager (e.g. <a href="https://wiki.archlinux.org/title/GDM#Wayland_and_the_proprietary_NVIDIA_driver" title="GDM">GDM</a>).
+</p>
+<h2><span class="mw-headline" id="Tips_and_tricks">Tips and tricks</span></h2>
+<h3><span class="mw-headline" id="Automation">Automation</span></h3>
+<ul><li><a rel="nofollow" class="external text" href="https://github.com/ReimuNotMoe/ydotool">ydotool</a> (<span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://archlinux.org/packages/?name=ydotool">ydotool</a></span>) - Generic command-line automation tool (not limited to wayland). <a href="https://wiki.archlinux.org/title/Enable/start" class="mw-redirect" title="Enable/start">Enable/start</a> the <code>ydotool.service</code> <a href="https://wiki.archlinux.org/title/User_unit" class="mw-redirect" title="User unit">user unit</a>. See <span class="plainlinks archwiki-template-man" title="$ man 8 ydotoold"><a rel="nofollow" class="external text" href="https://man.archlinux.org/man/ydotoold.8">ydotoold(8)</a></span>, <span class="plainlinks archwiki-template-man" title="$ man 1 ydotoold"><a rel="nofollow" class="external text" href="https://github.com/ReimuNotMoe/ydotool/blob/master/manpage/ydotool.1.scd">ydotoold(1)</a></span>.</li>
+<li><a rel="nofollow" class="external text" href="https://github.com/atx/wtype">wtype</a> (<span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://archlinux.org/packages/?name=wtype">wtype</a></span>) - xdotool type for wayland. See <span class="plainlinks archwiki-template-man" title="$ man 1 wtype"><a rel="nofollow" class="external text" href="https://man.archlinux.org/man/wtype.1">wtype(1)</a></span>.</li>
+<li><a rel="nofollow" class="external text" href="https://github.com/boppreh/keyboard">keyboard</a> - Python library that works on Windows and Linux with experimental OS X support.  Also see the <a rel="nofollow" class="external text" href="https://github.com/boppreh/mouse">mouse</a> library.</li>
+<li><a rel="nofollow" class="external text" href="https://git.sr.ht/~brocellous/wlrctl">wlrctl</a>  (<span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://aur.archlinux.org/packages/wlrctl/">wlrctl</a></span><sup><small>AUR</small></sup>) - A command line utility for miscellaneous wlroots extensions (supports the foreign-toplevel-management, virtual-keyboard, virtual-pointer)</li></ul>
+<h3><span class="mw-headline" id="Kwin_Wayland_debug_console">Kwin Wayland debug console</span></h3>
+<p>If you use <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://archlinux.org/packages/?name=kwin">kwin</a></span>, execute the following to see which windows use Xwayland or native Wayland, surfaces, input events, clipboard contents, and more.
+</p>
+<pre>$ qdbus org.kde.KWin /KWin org.kde.KWin.showDebugConsole
+</pre>
+<h3><span class="mw-headline" id="Detect_Xwayland_applications_visually">Detect Xwayland applications visually</span></h3>
+<p>To determine whether an application is running via Xwayland, you can run <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://aur.archlinux.org/packages/extramaus/">extramaus</a></span><sup><small>AUR</small></sup>.
+Move your mouse pointer over the window of an application. If the red mouse moves, the application is running via Xwayland.
+</p><p>Alternatively, you can use <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://archlinux.org/packages/?name=xorg-xeyes">xorg-xeyes</a></span> and see if the eyes are moving, when moving the mouse pointer over an application window.
+</p><p>An other option is to run <i>xwininfo</i> (from <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://archlinux.org/packages/?name=xorg-xwininfo">xorg-xwininfo</a></span>) in a terminal window&#160;: when hovering over an Xwayland window the mouse pointer will turn into a + sign. If you click the window it will display some information and end, but it will not do anything with native Wayland windows.You can use <code>Ctrl+C</code> to end it.
+</p>
+<h3><span class="mw-headline" id="Remap_keyboard_or_mouse_keys">Remap keyboard or mouse keys</span></h3>
+<p>See <a href="https://wiki.archlinux.org/title/Input_remap_utilities" title="Input remap utilities">Input remap utilities</a>.
+</p>
+<h2><span class="mw-headline" id="Troubleshooting">Troubleshooting</span></h2>
+<h3><span class="mw-headline" id="Color_correction">Color correction</span></h3>
+<p>See <a href="https://wiki.archlinux.org/title/Backlight#Color_correction" title="Backlight">Backlight#Color correction</a>.
+</p>
+<h3><span id="Slow_motion.2C_graphical_glitches.2C_and_crashes"></span><span class="mw-headline" id="Slow_motion,_graphical_glitches,_and_crashes">Slow motion, graphical glitches, and crashes</span></h3>
+<p>Gnome-shell users may experience display issues when they switch to Wayland from X. One of the root cause might be the <code>CLUTTER_PAINT=disable-clipped-redraws:disable-culling</code> set by yourself for Xorg-based gnome-shell. Just try to remove it from <code>/etc/environment</code> or other rc files to see if everything goes back to normal.
+</p>
+<h3><span class="mw-headline" id="Remote_display">Remote display</span></h3>
+<ul><li><span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://archlinux.org/packages/?name=wlroots">wlroots</a></span> (used by <a href="https://wiki.archlinux.org/title/Sway" title="Sway">sway</a>) offers a VNC backend via <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://archlinux.org/packages/?name=wayvnc">wayvnc</a></span> since version 0.10. RDP backend has been removed <a rel="nofollow" class="external autonumber" href="https://github.com/swaywm/wlroots/releases/tag/0.10.0">[6]</a>.</li>
+<li><span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://archlinux.org/packages/?name=mutter">mutter</a></span> has now remote desktop enabled at compile time, see <a rel="nofollow" class="external autonumber" href="https://wiki.gnome.org/Projects/Mutter/RemoteDesktop">[7]</a> and <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://archlinux.org/packages/?name=gnome-remote-desktop">gnome-remote-desktop</a></span> for details.</li>
+<li>There was a merge of FreeRDP into Weston in 2013, enabled via a compile flag. The <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://archlinux.org/packages/?name=weston">weston</a></span> package has it enabled since version 6.0.0.</li>
+<li><span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://aur.archlinux.org/packages/waypipe/">waypipe</a></span><sup><small>AUR</small></sup> (or <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://aur.archlinux.org/packages/waypipe-git/">waypipe-git</a></span><sup><small>AUR</small></sup>) is a transparent proxy for Wayland applications, with a wrapper command to run over <a href="https://wiki.archlinux.org/title/SSH" class="mw-redirect" title="SSH">SSH</a></li></ul>
+<h3><span id="Input_grabbing_in_games.2C_remote_desktop_and_VM_windows"></span><span class="mw-headline" id="Input_grabbing_in_games,_remote_desktop_and_VM_windows">Input grabbing in games, remote desktop and VM windows</span></h3>
+<p>In contrast to Xorg, Wayland does not allow exclusive input device grabbing, also known as active or explicit grab (e.g. <a rel="nofollow" class="external text" href="https://tronche.com/gui/x/xlib/input/XGrabKeyboard.html">keyboard</a>, <a rel="nofollow" class="external text" href="https://tronche.com/gui/x/xlib/input/XGrabPointer.html">mouse</a>), instead, it depends on the Wayland compositor to pass keyboard shortcuts and confine the pointer device to the application window.
+</p><p>This change in input grabbing breaks current applications' behavior, meaning:
+</p>
+<ul><li>Hotkey combinations and modifiers will be caught by the compositor and will not be sent to remote desktop and virtual machine windows.</li>
+<li>The mouse pointer will not be restricted to the application's window which might cause a parallax effect where the location of the mouse pointer inside the window of the virtual machine or remote desktop is displaced from the host's mouse pointer.</li></ul>
+<p>Wayland solves this by adding protocol extensions for Wayland and XWayland. Support for these extensions is needed to be added to the Wayland compositors. In the case of native Wayland clients, the used widget toolkits (e.g GTK, Qt) needs to support these extensions or the applications themselves if no widget toolkit is being used. In the case of Xorg applications, no changes in the applications or widget toolkits are needed as the XWayland support is enough.
+</p><p>These extensions are already included in <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://archlinux.org/packages/?name=wayland-protocols">wayland-protocols</a></span>, and supported by <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://archlinux.org/packages/?name=xorg-xwayland">xorg-xwayland</a></span>.
+</p><p>The related extensions are:
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://gitlab.freedesktop.org/wayland/wayland-protocols/-/blob/main/unstable/xwayland-keyboard-grab/xwayland-keyboard-grab-unstable-v1.xml">XWayland keyboard grabbing protocol</a></li>
+<li><a rel="nofollow" class="external text" href="https://gitlab.freedesktop.org/wayland/wayland-protocols/-/blob/main/unstable/keyboard-shortcuts-inhibit/keyboard-shortcuts-inhibit-unstable-v1.xml">Compositor shortcuts inhibit protocol</a></li>
+<li><a rel="nofollow" class="external text" href="https://gitlab.freedesktop.org/wayland/wayland-protocols/-/blob/main/unstable/relative-pointer/relative-pointer-unstable-v1.xml">Relative pointer protocol</a></li>
+<li><a rel="nofollow" class="external text" href="https://gitlab.freedesktop.org/wayland/wayland-protocols/-/blob/main/unstable/pointer-constraints/pointer-constraints-unstable-v1.xml">Pointer constraints protocol</a></li></ul>
+<p>Supporting Wayland compositors:
+</p>
+<ul><li>Mutter, <a href="https://wiki.archlinux.org/title/GNOME" title="GNOME">GNOME</a>'s compositor <a rel="nofollow" class="external text" href="https://bugzilla.gnome.org/show_bug.cgi?id=783342">since release 3.28</a></li>
+<li>wlroots supports relative-pointer and pointer-constraints</li>
+<li>Kwin
+<ul><li><a href="https://wiki.archlinux.org/title/KDE#X11_shortcuts_conflict_on_Wayland" title="KDE">KDE#X11 shortcuts conflict on Wayland</a></li>
+<li><a rel="nofollow" class="external text" href="https://invent.kde.org/plasma/kwin/-/blob/master/src/wayland/keyboard_shortcuts_inhibit_v1_interface.cpp">Keybord shortcuts inhibit</a></li></ul></li></ul>
+<p>Supporting widget toolkits:
+</p>
+<ul><li>GTK since release 3.22.18.</li></ul>
+<h3><span class="mw-headline" id="GTK_themes_not_working">GTK themes not working</span></h3>
+<p>See <a rel="nofollow" class="external free" href="https://github.com/swaywm/sway/wiki/GTK-3-settings-on-Wayland">https://github.com/swaywm/sway/wiki/GTK-3-settings-on-Wayland</a>.
+</p>
+<h3><span class="mw-headline" id="Avoid_loading_NVIDIA_modules">Avoid loading NVIDIA modules</span></h3>
+<p>Add <code>__EGL_VENDOR_LIBRARY_FILENAMES=/usr/share/glvnd/egl_vendor.d/50_mesa.json</code> as <a href="https://wiki.archlinux.org/title/Environment_variable" class="mw-redirect" title="Environment variable">environment variable</a> before launching a Wayland compositor like <a href="https://wiki.archlinux.org/title/Sway" title="Sway">sway</a>.
+</p>
+<h3><span id="Magnifying.2Fsurface_scaling"></span><span class="mw-headline" id="Magnifying/surface_scaling">Magnifying/surface scaling</span></h3>
+<p>Screen magnifying is not solved yet, a pull request was merged mid-2022 <a rel="nofollow" class="external text" href="https://gitlab.freedesktop.org/wayland/wayland-protocols/-/merge_requests/145">providing the protocol wp-surface-scale</a>.
+</p>
+<h2><span class="mw-headline" id="See_also">See also</span></h2>
+<ul><li><a rel="nofollow" class="external text" href="https://wayland.freedesktop.org/docs/html/">Wayland documentation online</a></li>
+<li><a rel="nofollow" class="external text" href="https://gitlab.freedesktop.org/wayland">Official Wayland Git Repo</a></li>
+<li><a href="https://fedoraproject.org/wiki/How_to_debug_Wayland_problems" class="extiw" title="fedora:How to debug Wayland problems">Fedora:How to debug Wayland problems</a></li>
+<li><a rel="nofollow" class="external text" href="https://arewewaylandyet.com/">Are we Wayland yet?</a></li>
+<li><a rel="nofollow" class="external text" href="https://awesomeopensource.com/projects/wayland">Awesome Wayland projects</a></li>
+<li><a href="https://wiki.archlinux.org/title/Cursor_themes" title="Cursor themes">Cursor themes</a></li>
+<li><a rel="nofollow" class="external text" href="https://bbs.archlinux.org/viewtopic.php?id=107499">Arch Linux forum discussion</a></li>
+<li><a rel="nofollow" class="external text" href="https://github.com/swaywm/sway/wiki/i3-Migration-Guide#common-x11-apps-used-on-i3-with-wayland-alternatives">i3 Migration Guide - Common X11 apps used on i3 with Wayland alternatives</a></li>
+<li><a rel="nofollow" class="external text" href="https://wayland.app/protocols/">Wayland Explorer - A better way to read Wayland documentation</a></li>
+<li><a rel="nofollow" class="external text" href="https://askubuntu.com/questions/1393618/how-can-i-tell-if-an-application-is-using-xwayland">How can I tell if an application is using XWayland</a></li></ul>
+<!-- 
+NewPP limit report
+Cached time: 20230326162621
+Cache expiry: 86400
+Reduced expiry: false
+Complications: [show‐toc]
+CPU time usage: 0.139 seconds
+Real time usage: 0.147 seconds
+Preprocessor visited node count: 1476/1000000
+Post‐expand include size: 22470/2097152 bytes
+Template argument size: 10904/2097152 bytes
+Highest expansion depth: 8/100
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 61/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%   79.349      1 -total
+ 22.88%   18.155     26 Template:App
+ 15.72%   12.477      1 Template:Yes
+ 11.79%    9.357      1 Template:G
+  8.59%    6.813      1 Template:Related_articles_start
+  6.56%    5.207      5 Template:Note
+  5.95%    4.718     32 Template:Pkg
+  5.46%    4.334      1 Template:META_Related_articles_start
+  5.39%    4.279     25 Template:AUR
+  5.09%    4.036     29 Template:Ic
+-->
+
+<!-- Saved in parser cache with key archwiki:pcache:idhash:10625-0!canonical and timestamp 20230326162621 and revision id 773197.
+ -->
+</div>
+<div class="printfooter" data-nosnippet="">Retrieved from "<a dir="ltr" href="https://wiki.archlinux.org/index.php?title=Wayland&amp;oldid=773197">https://wiki.archlinux.org/index.php?title=Wayland&amp;oldid=773197</a>"</div></div>
+					<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="https://wiki.archlinux.org/title/Special:Categories" title="Special:Categories">Category</a>: <ul><li><a href="https://wiki.archlinux.org/title/Category:Graphical_user_interfaces" title="Category:Graphical user interfaces">Graphical user interfaces</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="https://wiki.archlinux.org/title/Category:Pages_with_missing_package_links" title="Category:Pages with missing package links">Pages with missing package links</a></li><li><a href="https://wiki.archlinux.org/title/Category:Pages_with_dead_links" title="Category:Pages with dead links">Pages with dead links</a></li></ul></div></div>
+				</div>
+			</main>
+			
+		</div>
+		<div class="mw-footer-container">
+			
+<footer id="footer" class="mw-footer" role="contentinfo" >
+	<ul id="footer-info">
+	<li id="footer-info-lastmod"> This page was last edited on 19 March 2023, at 04:23.</li>
+	<li id="footer-info-copyright">Content is available under <a class="external" rel="nofollow" href="https://www.gnu.org/copyleft/fdl.html">GNU Free Documentation License 1.3 or later</a> unless otherwise noted.</li>
+</ul>
+
+	<ul id="footer-places">
+	<li id="footer-places-privacy"><a href="https://terms.archlinux.org/docs/privacy-policy/">Privacy policy</a></li>
+	<li id="footer-places-about"><a href="https://wiki.archlinux.org/title/ArchWiki:About">About ArchWiki</a></li>
+	<li id="footer-places-disclaimer"><a href="https://wiki.archlinux.org/title/ArchWiki:General_disclaimer">Disclaimers</a></li>
+</ul>
+
+	
+</footer>
+
+		</div>
+	</div> 
+</div> 
+
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.139","walltime":"0.147","ppvisitednodes":{"value":1476,"limit":1000000},"postexpandincludesize":{"value":22470,"limit":2097152},"templateargumentsize":{"value":10904,"limit":2097152},"expansiondepth":{"value":8,"limit":100},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":61,"limit":5000000},"timingprofile":["100.00%   79.349      1 -total"," 22.88%   18.155     26 Template:App"," 15.72%   12.477      1 Template:Yes"," 11.79%    9.357      1 Template:G","  8.59%    6.813      1 Template:Related_articles_start","  6.56%    5.207      5 Template:Note","  5.95%    4.718     32 Template:Pkg","  5.46%    4.334      1 Template:META_Related_articles_start","  5.39%    4.279     25 Template:AUR","  5.09%    4.036     29 Template:Ic"]},"cachereport":{"timestamp":"20230326162621","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":97});});</script>
+</body>
+<!-- Cached/compressed 20230327041426 -->
+
+<!-- Mirrored from wiki.archlinux.org/title/wayland by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 27 Mar 2023 07:42:02 GMT -->
+</html>

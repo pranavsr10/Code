@@ -1,0 +1,8 @@
+-%e1 https://archcraft.io/index.html
+File generated automatically on Mon, 27 Mar 2023 13:03:11, do NOT edit
+
+To update a mirror, just launch httrack without any parameters
+The existing cache will be used (and modified)
+To have other options, retype all parameters and launch HTTrack
+To continue an interrupted mirror, just launch httrack without any parameters
+

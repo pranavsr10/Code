@@ -1,0 +1,14 @@
+HTTrack3.49-2 launched on Mon, 27 Mar 2023 13:03:11 at https://archcraft.io/index.html
+(httrack -%e1 https://archcraft.io/index.html )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+13:04:03	Warning: 	Moved Permanently for https://www.archlinux.org/robots.txt
+13:04:03	Warning: 	Redirected link is identical because of 'URL Hack' option: https://www.archlinux.org/robots.txt and https://archlinux.org/robots.txt
+13:04:03	Warning: 	Warning moved treated for https://www.archlinux.org/robots.txt (real one is https://archlinux.org/robots.txt)
+13:04:03	Warning: 	Moved Permanently for https://www.archlinux.org/
+13:04:03	Warning: 	Redirected link is identical because of 'URL Hack' option: https://www.archlinux.org/ and https://archlinux.org/
+13:04:03	Warning: 	File has moved from https://www.archlinux.org/ to https://archlinux.org/

@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <sys/types.h>
 
 struct node{
   int input; 
@@ -119,7 +118,7 @@ int DeleteFromEnd(){
   return 0;
 }
 
-uint
+
 
 int Traversal(){
   if (head == NULL){

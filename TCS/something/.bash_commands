@@ -1,0 +1,3 @@
+: "how does this work?"                 ;   perl -ne 'print if /cue begin/ .. /cue end/' < ~/.bashrc ; echo; cat ~/.bash_commands
+: "pick branch and checkout"            ;   git checkout `git branch | fzf | cut -c3-`
+: "find country of IP"                  ;   whois -h whois.cymru.com -v

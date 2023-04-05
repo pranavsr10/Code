@@ -1,0 +1,178 @@
+[user]
+        name = Linux Learner
+        email = ll@example.com
+
+[color]
+        ui = true
+[color "status"]
+        untracked = yellow
+        changed   = red bold
+        updated   = green bold
+[color "diff"]
+        old       = red bold
+        new       = green bold
+        plain     = white dim
+
+[core]
+        pager = less -RF
+
+[diff]
+        mnemonicprefix = true
+        tool = kdiff3
+        colorMoved = zebra
+        colorMovedWS = ignore-all-space
+[merge]
+        tool = kdiff3
+[gui]
+        editor = gvim
+[guitool "edit"]
+        cmd = gvim -f $FILENAME
+        noconsole = yes
+        needsfile = yes
+[guitool "mergetool"]
+        cmd = git mergetool -y -t kdiff3 $FILENAME
+        noconsole = yes
+        needsfile = yes
+[push]
+        default = matching
+[mergetool]
+        keepBackup = false
+
+# ----------------------------------------------------------------------
+# everyday aliases
+[alias]
+        s       = status -s -b -uno
+        st      = status
+
+        b       = branch
+        ba      = branch -a -v -v
+        bc      = !git-branch-check
+
+        co      = checkout
+        aa      = add -A .
+        ci      = commit -v -uno
+
+        ca      = commit -a -m
+        cm      = commit -a --amend -C HEAD
+        cap     = "!f() { git ca \"${1:-$_HOST}\"; git pall; }; f"
+        cmf     = "!f() { git cm; git pall --force-with-lease; }; f"
+
+        d       = diff  -C
+        dw      = diff  -C -w
+        ds      = diff  -C --stat
+        dsp     = diff  -C --stat -p
+        dwc     = diff  -C --color-words
+        dwcd    = diff  -C --color-words --word-diff-regex=.
+
+        du      = diff  -C @{u}
+        dwu     = diff  -C -w @{u}
+        dcwu=   diff  -C --color-words @{u}
+
+        l       = log   -C --decorate
+        ls      = log   -C --stat --decorate
+        lsp     = log   -C --stat -p --decorate
+
+        lgbw    = log   --graph --boundary '--format=%h %ar %d %s'
+        lg      = log   --graph --boundary '--format=%C(blue bold)%h%Creset %C(green bold)%ar%Creset %C(blue bold)%d%Creset %s'
+        lga     = log   --graph --boundary '--format=%C(blue bold)%h%Creset %C(green bold)%ar%Creset %C(blue bold)%d%Creset %s' --all
+        # this is the most commonly used one, it turns out!
+        l19     = log   --graph --boundary '--format=%C(blue bold)%h%Creset %C(green bold)%ar%Creset %C(blue bold)%d%Creset %s' --all -19
+        # and this one can be a real lifesaver on a complex tree
+        lsd     = log   --graph --boundary '--format=%C(blue bold)%h%Creset %C(green bold)%ar%Creset %C(blue bold)%d%Creset %s' --all --simplify-by-decoration
+        # log left-right; requires argument like A...B (3 dots)
+        lglr    = log   --graph --boundary '--format=%C(blue bold)%h%Creset %C(green bold)%ar%Creset %C(blue bold)%d%Creset %s' --boundary --left-right --cherry-pick
+
+        # new repo exploration...
+        who     = shortlog -nse
+        hwen    = !git log --oneline --all --format=%ad --date=format:%Y-%m | visidata -
+        when    = !git log --oneline --all --format=%ad --date=format:%Y-%m | sort | datamash -g 1 count 1 | feedgnuplot --timefmt '%Y-%m' --domain --lines --points --set 'format x \"%b\\n%Y\"'
+
+        # this is so frequent for me...
+        pom     = push origin master
+        pall    = !git remote | map -p4 -n1 'git push'
+
+        rl      = reflog show --date=relative
+
+        ru      = remote update
+
+        sl      = stash list
+        sp      = stash pop
+        ss      = stash save
+        # "show-branch -g=N" can't be aliased for N easily, so we stop here:
+        sb      = show-branch
+        # pg sbt master pu -- if the last line is 'master' and not 'master^'
+        # or 'master~N' then pu is a descendent of master
+        sbt     = show-branch --topics
+        sbs     = show-branch --sha1-name
+
+        k       = !gitk
+        ka      = !gitk --all
+        kado    = !gitk --all --date-order
+        kasd    = !gitk --all --simplify-by-decoration
+
+        gs      = !raf gs
+
+# ----------------------------------------------------------------------
+# exotic aliases
+[alias]
+        # checkpoint
+        cp      = "!f() { git stash save -u; git push work +refs/stash:refs/heads/checkpoint; git stash pop; }; f"
+
+        # 3 different levels of stash, resulting in:
+        #   git stsh      # stash only unstaged changes to tracked files
+        #   git stash     # stash any changes to tracked files
+        #   git staash    # stash untracked and tracked files
+        #   git staaash   # stash ignored, untracked, and tracked files 
+        stsh = stash --keep-index
+        staash = stash --include-untracked
+        staaash = stash --all
+
+        # when was this file last updated, on each local branch
+        wwflu   = "!f() { for b in $(git rev-parse --symbolic --branches); do echo -e `git log --format=%at:%ar -1 $b -- \"$1\"`\\\\t$b; done | sort -r |cut -f2 -d: ; }; f"
+
+        gviz    = "!f() { echo 'digraph git {' ; git log --pretty='format: %h -> { %p }' \"$@\" | sed 's/[0-9a-f][0-9a-f]*/\"&\"/g' ; echo '}'; }; f"
+
+        cat     = -p cat-file -p
+
+        top     = !eval cd "$(pwd)/$(git rev-parse --show-cdup)" && pwd
+
+        gfb     = "!f() { git filter-repo --path $1 --invert-paths --replace-refs delete-no-add; }; f"
+
+        GC      = "!f() { set -x; du -sk .git .; git reflog expire --all --expire=now; git gc --aggressive --prune=now; du -sk .git .; }; f"
+
+        UP      = "!f() { umask 022; pwd; git pull; git diff --quiet ORIG_HEAD.. || gitk ORIG_HEAD..            ; }; f"
+
+# ----------------------------------------------------------------------
+# file list and related aliases
+[alias]
+        ls-del  = ls-files -d
+        ls-mod  = ls-files -m   # this will include deleted files also
+        ls-new  = ls-files --exclude-standard -o
+        # this one is a MUST have
+        ls-ign  = ls-files --exclude-standard -o -i
+        lsfiles = ls-files --exclude-per-directory=.gitignore \
+                           --exclude-from=.git/info/exclude \
+                           -v -d -o -m -s -u
+
+        # pushall = "!f() { git remote | map -p git push; }; f"
+        lal     = "!f() { git ls-tree -l -r -t ${1:-HEAD} | cut -c53-; }; f"
+        la      = "!f() { git ls-tree    -r -t ${1:-HEAD} | cut -f2  ; }; f"
+
+# ----------------------------------------------------------------------
+# visualising hidden refs
+        sk      = !gitk --date-order $(git stash list | cut -d: -f1) --not --branches --tags --remotes
+
+        d1      = !gitk --date-order $(git log -g --pretty=%H) --not --branches --tags --remotes
+        d2      = !gitk --date-order $(git fsck | grep "dangling.commit" | cut -f3 -d' ') --not --branches --tags --remotes
+
+# ----------------------------------------------------------------------
+# remote repo aliases
+[alias]
+        radd    = "!f() { ssh $1 git init --bare ~/repositories/$2.git; git remote add $1 $1:repositories/$2.git; }; f"
+
+# ----------------------------------------------------------------------
+# local
+[include]
+	path = ~/.gitconfig.local
+[init]
+	defaultBranch = master

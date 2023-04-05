@@ -1,0 +1,104 @@
+% Linux command line efficiency
+
+IMPORTANT NOTE: none of this is PRESCRIPTIVE -- you will have to evolve your own
+
+# essential commands (summary only)
+
+-   cd, pwd, ls, cat, echo, date
+-   mkdir
+-   cp, mv, ln, ln -s
+-   rm, rmdir
+-   cut, head, tail, wc
+-   paste, sed, sort, uniq
+-   grep, find
+-   chmod, chown
+-   df, du
+-   w, uname, who
+-   vi/vim
+
+# git
+
+-   <https://gitolite.com/vc.html> -- very basic intro slides
+-   <https://gitolite.com/gcs.html> -- git concepts simplified
+-   <https://gitolite.com/git.html> -- what makes git so much more powerful than other VCSs
+
+# interactive shell use
+
+-   tab completion
+-   aliases and functions for frequently used commands
+    -   (also for less frequently used but *useful* commands you may not remember when needed!)
+    -   examples
+        -   la, ll, lla, lca, lta
+        -   v0/1/2, vm, vd, vg
+-   readline and history search
+    -   preview fzf based history search :)
+-   `!!`, `!*`, `!$` (in brief)
+-   piping and redirection, tee
+
+# shell and vim settings/env vars
+
+-   EDITOR, LESS, other tool-specific vars (e.g., fzf)
+
+-   line numbering, ignore case in vim
+
+-   shell prompt
+    -   additional context/information, aesthetics
+    -   current time, current directory (advanced: git status)
+    -   exit code after running a command
+    -   git related support in bash (and vim)
+
+-   example: man page colors, color script
+
+# essential tools
+
+## coreutils knowledge, including awk/similar
+
+-   examples: count, total, ...
+
+-   find, grep, uniq, sort, cut, diff, sed, ... lots more
+-   md5sum, sha\*sum, b3sum
+
+## git
+
+## fzf
+
+-   fzf for files and directories (ctrl-f, alt-c)
+-   introduce the fzf variants of vd and vg
+-   "pick" command
+-   "try" command
+
+## tmux
+
+-   "ttail" command
+
+## vim
+
+## vifm
+
+# directory navigation and file search
+
+-   bm and to
+
+# text search
+
+-   rg (or eqvt)
+
+# some common tools
+
+-   rsync, wget, curl, top/htop/lsof/strace/ltrace..., ncdu/gdu, socat
+-   visidata, datamash, pandoc, graphviz
+-   ssh, scp, sftp, sshfs, rclone, vidir
+-   pdf reader (okular -- excellent search features)
+-   git and git's GUI tools, kdiff3
+-   image viewer, video player
+
+# custom commands
+
+# best practice -- backups
+
+# other tips/tricks and less common tools
+
+-   Ym, Ymd
+-   bq
+-   recoll
+-   pv
